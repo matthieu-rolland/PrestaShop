@@ -92,8 +92,9 @@ class CategoryController extends FrameworkBundleAdminController
                             ],
                         ]
                     );
-
+                    // TODO use cqrs here
                     if ($request->query->has('id_product')) {
+                        echo $request->query->get('id_product'); exit;
                         $productAdapter = $this->get('prestashop.adapter.data_provider.product');
                         $product = $productAdapter->getProduct($request->query->get('id_product'));
                         $product->addToCategories($categoryId->getValue());
