@@ -27,6 +27,10 @@
 namespace PrestaShop\PrestaShop\Adapter\Product\CommandHandler;
 
 use PrestaShop\PrestaShop\Adapter\Domain\AbstractObjectModelHandler;
+use PrestaShop\PrestaShop\Core\Domain\Product\CommandHandler\AddCategoryToProductHandlerInterface;
+use PrestaShop\PrestaShop\Core\Domain\Product\Command\AddCategoryToProductCommand;
+use PrestaShop\PrestaShop\Adapter\Product\ProductDataProvider;
+use PrestaShop\PrestaShop\Core\Domain\Product\Exception\CannotAddCategoryToProductException;
 
 /**
  * Adds a category to a product
@@ -35,6 +39,18 @@ use PrestaShop\PrestaShop\Adapter\Domain\AbstractObjectModelHandler;
  */
 final class AddCategoryToProductHandler extends AbstractObjectModelHandler implements AddCategoryToProductHandlerInterface
 {
+	public function handle(AddCategoryToProductCommand $command)
+	{
+		$this->addCategoryToProduct($command);
+	}
 
-
+	private function addCategoryToProduct(AddCategoryToProductCommand $command)
+	{
+		$productDataProvider = new ProductDataProvider();
+		$product = $productDataProvider->getProductInstance($command->getProductId());
+		$product->addToCategories($command->getCategoryId());
+		if (false === $product->save()) {
+			throw new CannotAddCategoryToProductException('Failed to add category to product');
+		}
+	}
 }

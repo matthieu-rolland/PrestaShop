@@ -64,7 +64,7 @@ class AddCategoryToProductCommand
      *
      * @throws CategoryConstraintException
      */
-    public function setCategoryId($categoryId)
+    public function setCategoryId(int $categoryId)
     {
         if (!is_int($categoryId) || 0 >= $categoryId) {
             throw new CategoryConstraintException(
@@ -79,23 +79,39 @@ class AddCategoryToProductCommand
     }
 
     /**
+     * @return int
+     */
+    public function getCategoryId()
+    {
+        return $this->categoryId;
+    }
+
+    /**
      * @param int $productId
      *
      * @return self
      *
      * @throws ProductConstraintException
      */
-    public function setProductId($productId)
+    public function setProductId(int $productId)
     {
         if (!is_int($productId) || 0 >= $productId) {
             throw new ProductConstraintException(
                 sprintf('Invalid Product id %s supplied', var_export($productId, true)),
-                ProductConstraintException::INVALID_PRODUCT_ID
+                ProductConstraintException::INVALID_ID
             );
         }
 
         $this->productId = $productId;
 
         return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProductId()
+    {
+        return $this->productId;
     }
 }
