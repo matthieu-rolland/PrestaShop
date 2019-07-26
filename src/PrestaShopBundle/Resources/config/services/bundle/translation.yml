@@ -3,10 +3,17 @@ services:
         public: true
 
     # override symfony translator
+    #prestashop.translator:
+    #    class: PrestaShopBundle\Translation\ContextTranslator
+    #    decorates: translator
+    #    arguments: ['@prestashop.adapter.legacy.context']
+
     prestashop.translator:
-        class: PrestaShopBundle\Translation\ContextTranslator
-        decorates: translator
-        arguments: ['@prestashop.adapter.legacy.context']
+        class: PrestaShopBundle\Translation\NewTranslator
+        decorates: 'translator'
+        arguments:
+            - '@prestashop.translator.inner'
+            - '%kernel.cache_dir%'
 
     #TRANSLATIONS FACTORIES
     prestashop.translation.translations_factory:

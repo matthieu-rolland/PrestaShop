@@ -29,6 +29,7 @@ use PrestaShopBundle\Translation\TranslatorComponent as Translator;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Translation\Loader\XliffFileLoader;
+use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
 
 /**
  * Class ContextCore.
@@ -365,11 +366,11 @@ class ContextCore
         if (null !== $this->translator) {
             return $this->translator;
         }
+        // var_dump($this->shop); exit;
+        $this->translator = SymfonyContainer::getInstance()->get('translator');
+        // $this->translator = $this->getTranslatorFromLocale($this->language->locale);
 
-        $translator = $this->getTranslatorFromLocale($this->language->locale);
-        $this->translator = $translator;
-
-        return $translator;
+        return $this->translator;
     }
 
     /**
@@ -383,7 +384,7 @@ class ContextCore
     {
         $cacheDir = _PS_CACHE_DIR_ . 'translations';
         $translator = new Translator($locale, null, $cacheDir, false);
-
+        /*
         // In case we have at least 1 translated message, we return the current translator.
         // If some translations are missing, clear cache
         if ($locale === '' || count($translator->getCatalogue($locale)->all())) {
@@ -407,6 +408,7 @@ class ContextCore
         $translator->addLoader('xlf', new XliffFileLoader());
 
         $sqlTranslationLoader = new SqlTranslationLoader();
+        //TODO see how to get this dependency in new translator
         if (null !== $this->shop) {
             $sqlTranslationLoader->setTheme($this->shop->theme);
         }
@@ -428,7 +430,7 @@ class ContextCore
                 $translator->addResource('db', $domain . '.' . $locale . '.db', $locale, $domain);
             }
         }
-
+        */
         return $translator;
     }
 
