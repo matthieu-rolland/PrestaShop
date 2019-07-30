@@ -366,9 +366,13 @@ class ContextCore
         if (null !== $this->translator) {
             return $this->translator;
         }
-        // var_dump($this->shop); exit;
-        $this->translator = SymfonyContainer::getInstance()->get('translator');
-        // $this->translator = $this->getTranslatorFromLocale($this->language->locale);
+        $sfContainer = SymfonyContainer::getInstance();
+        if (null !== $sfContainer) {
+            $translator = SymfonyContainer::getInstance()->get('translator');
+            $this->translator = $this->configureTranslator($translator, _PS_CACHE_DIR_ . 'translations');
+        } else {
+            $this->translator = $this->getTranslatorFromLocale($this->language->locale);
+        }
 
         return $this->translator;
     }
@@ -384,26 +388,32 @@ class ContextCore
     {
         $cacheDir = _PS_CACHE_DIR_ . 'translations';
         $translator = new Translator($locale, null, $cacheDir, false);
-        /*
+
         // In case we have at least 1 translated message, we return the current translator.
         // If some translations are missing, clear cache
-        if ($locale === '' || count($translator->getCatalogue($locale)->all())) {
+        if ($this->language->locale === '' || count($translator->getCatalogue($this->language->locale)->all())) {
             $this->translator = $translator;
 
             return $translator;
         }
 
+        return $this->configureTranslator($translator, $cacheDir);
+    }
+
+    protected function configureTranslator($translator, $cacheDir)
+    {
         // However, in some case, even empty catalog were stored in the cache and then used as-is.
         // For this one, we drop the cache and try to regenerate it.
+        //$translator->dropTranslationCache($cacheDir);
         if (is_dir($cacheDir)) {
             $cache_file = Finder::create()
                 ->files()
                 ->in($cacheDir)
                 ->depth('==0')
-                ->name('*.' . $locale . '.*');
+                ->name('*.' . $this->language->locale . '.*');
             (new Filesystem())->remove($cache_file);
         }
-
+        //$translator->addTranslationLoaders($this->shop);
         $adminContext = defined('_PS_ADMIN_DIR_');
         $translator->addLoader('xlf', new XliffFileLoader());
 
@@ -415,22 +425,22 @@ class ContextCore
 
         $translator->addLoader('db', $sqlTranslationLoader);
         $notName = $adminContext ? '^Shop*' : '^Admin*';
-
+        //$translator->addTranslationResources($this->language, $this->shop);
         $finder = Finder::create()
             ->files()
-            ->name('*.' . $locale . '.xlf')
+            ->name('*.' . $this->language->locale . '.xlf')
             ->notName($notName)
             ->in($this->getTranslationResourcesDirectories());
 
         foreach ($finder as $file) {
-            list($domain, $locale, $format) = explode('.', $file->getBasename(), 3);
+            list($domain, $this->language->locale, $format) = explode('.', $file->getBasename(), 3);
 
-            $translator->addResource($format, $file, $locale, $domain);
+            $translator->addResource($format, $file, $this->language->locale, $domain);
             if (!$this->language instanceof PrestashopBundle\Install\Language) {
-                $translator->addResource('db', $domain . '.' . $locale . '.db', $locale, $domain);
+                $translator->addResource('db', $domain . '.' . $this->language->locale . '.db', $this->language->locale, $domain);
             }
         }
-        */
+
         return $translator;
     }
 

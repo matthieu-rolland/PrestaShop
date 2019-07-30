@@ -27,7 +27,15 @@
 
 namespace PrestaShopBundle\Translation;
 
+use PrestaShopBundle\Translation\Loader\SqlTranslationLoader;
+use Symfony\Component\Translation\Exception\InvalidArgumentException;
+use Symfony\Component\Translation\Formatter\MessageFormatter;
+use Symfony\Component\Translation\Formatter\MessageFormatterInterface;
+use Symfony\Component\Translation\Loader\XliffFileLoader;
+use Symfony\Component\Translation\MessageSelector;
 use Symfony\Component\Translation\Translator as BaseTranslatorComponent;
+use Symfony\Component\Finder\Finder;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Translator used by Context

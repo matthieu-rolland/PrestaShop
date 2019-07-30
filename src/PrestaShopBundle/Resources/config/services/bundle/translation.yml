@@ -2,18 +2,14 @@ services:
     _defaults:
         public: true
 
-    # override symfony translator
-    #prestashop.translator:
-    #    class: PrestaShopBundle\Translation\ContextTranslator
-    #    decorates: translator
-    #    arguments: ['@prestashop.adapter.legacy.context']
-
-    prestashop.translator:
-        class: PrestaShopBundle\Translation\NewTranslator
-        decorates: 'translator'
-        arguments:
-            - '@prestashop.translator.inner'
-            - '%kernel.cache_dir%'
+    # override symfony fraweworkbundle translator with translatorcomponent (base translator)
+    translator:
+       class: PrestaShopBundle\Translation\TranslatorComponent
+       arguments:
+           - '%kernel.default_locale%'
+           - null
+           - '%kernel.cache_dir%/translations'
+           - false
 
     #TRANSLATIONS FACTORIES
     prestashop.translation.translations_factory:
