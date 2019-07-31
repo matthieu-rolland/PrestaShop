@@ -30,6 +30,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Translation\Loader\XliffFileLoader;
+use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
 
 /**
  * Class ContextCore.
@@ -387,7 +388,13 @@ class ContextCore
     public function getTranslatorFromLocale($locale)
     {
         $cacheDir = _PS_CACHE_DIR_ . 'translations';
-        $translator = new Translator($locale, null, $cacheDir, false);
+
+        $sfContainer = SymfonyContainer::getInstance();
+        if (null !== $sfContainer) {
+            return $sfContainer->get('translator');
+        } else {
+            $translator = new Translator($locale, null, $cacheDir, false);
+        }
 
         // In case we have at least 1 translated message, we return the current translator.
         // If some translations are missing, clear cache
