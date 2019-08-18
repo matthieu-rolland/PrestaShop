@@ -23,8 +23,6 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
-define('PS_SEARCH_MAX_WORD_LENGTH', 30);
-=======
 
 define('PS_SEARCH_MAX_WORD_LENGTH', 15);
 define('MAX_LEVENSHTEIN_BY_SEARCH', 10);
