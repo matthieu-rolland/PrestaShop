@@ -1262,7 +1262,8 @@ class AdminOrdersControllerCore extends AdminController
                 $this->errors[] = $this->trans('You do not have permission to add this.', array(), 'Admin.Notifications.Error');
             }
         } elseif ((Tools::isSubmit('submitAddressShipping') || Tools::isSubmit('submitAddressInvoice')) && isset($order)) {
-            if ($this->access('edit')) {
+            // If this order already has an invoice, its address must not be modified
+            if ($this->canChangeAddress($order)) {
                 $address = new Address(Tools::getValue('id_address'));
                 $cart = Cart::getCartByOrderId($order->id);
                 if (Validate::isLoadedObject($address)) {
@@ -1282,8 +1283,6 @@ class AdminOrdersControllerCore extends AdminController
                 } else {
                     $this->errors[] = $this->trans('This address can\'t be loaded', array(), 'Admin.Orderscustomers.Notification');
                 }
-            } else {
-                $this->errors[] = $this->trans('You do not have permission to edit this.', array(), 'Admin.Notifications.Error');
             }
         } elseif (Tools::isSubmit('submitChangeCurrency') && isset($order)) {
             if ($this->access('edit')) {
@@ -1627,6 +1626,18 @@ class AdminOrdersControllerCore extends AdminController
         }
 
         parent::postProcess();
+    }
+
+    private function canChangeAddress(Order $order)
+    {
+        if (!$this->access('edit')) {
+            $this->errors[] = $this->trans('You do not have permission to edit this.', array(), 'Admin.Notifications.Error');
+        }
+        if ($order->hasInvoice()) {
+            $this->errors[] = $this->trans('An order\'s address can\'t be changed once its invoice has been created.', array(), 'Admin.Notifications.Error');
+        }
+
+        return empty($this->errors);
     }
 
     public function renderKpis()
