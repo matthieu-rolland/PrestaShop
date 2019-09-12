@@ -168,7 +168,7 @@
             </a>
             &nbsp;
           {/if}
-          {if $order->hasInvoice()}
+          {if $order->hasInvoice() }
             <a id="desc-order-partial_refund" class="btn btn-default" href="#refundForm">
               <i class="icon-exchange"></i>
               {l s='Partial refund' d='Admin.Orderscustomers.Feature'}
@@ -680,7 +680,7 @@
               <h4 class="visible-print">{l s='Shipping address' d='Admin.Orderscustomers.Feature'}</h4>
               {if !$order->isVirtual()}
               <!-- Shipping address -->
-                {if $can_edit}
+                {if $can_edit && !$order->hasInvoice()}
                   <form class="form-horizontal hidden-print" method="post" action="{$link->getAdminLink('AdminOrders', true, [], ['vieworder' => 1, 'id_order' => $order->id|intval])|escape:'html':'UTF-8'}">
                     <div class="form-group">
                       <div class="col-lg-9">
@@ -711,10 +711,12 @@
                 <div class="well">
                   <div class="row">
                     <div class="col-sm-6">
-                      <a class="btn btn-default pull-right" href="?tab=AdminAddresses&amp;id_address={$addresses.delivery->id}&amp;addaddress&amp;realedit=1&amp;id_order={$order->id}&amp;address_type=1&amp;token={getAdminToken tab='AdminAddresses'}&amp;back={$smarty.server.REQUEST_URI|urlencode}">
-                        <i class="icon-pencil"></i>
-                        {l s='Edit' d='Admin.Actions'}
-                      </a>
+                      {if !$order->hasInvoice() }
+                        <a class="btn btn-default pull-right" href="?tab=AdminAddresses&amp;id_address={$addresses.delivery->id}&amp;addaddress&amp;realedit=1&amp;id_order={$order->id}&amp;address_type=1&amp;token={getAdminToken tab='AdminAddresses'}&amp;back={$smarty.server.REQUEST_URI|urlencode}">
+                          <i class="icon-pencil"></i>
+                          {l s='Edit' d='Admin.Actions'}
+                        </a>
+                      {/if}
                       {displayAddressDetail address=$addresses.delivery newLine='<br />'}
                       {if $addresses.delivery->other}
                         <hr />{$addresses.delivery->other}<br />
@@ -730,7 +732,7 @@
             <div class="tab-pane " id="addressInvoice">
               <!-- Invoice address -->
               <h4 class="visible-print">{l s='Invoice address' d='Admin.Orderscustomers.Feature'}</h4>
-              {if $can_edit}
+              {if $can_edit && !$order->hasInvoice()}
                 <form class="form-horizontal hidden-print" method="post" action="{$link->getAdminLink('AdminOrders', true, [], ['vieworder' => 1, 'id_order' => $order->id|intval])|escape:'html':'UTF-8'}">
                   <div class="form-group">
                     <div class="col-lg-9">
@@ -752,19 +754,22 @@
                         {/foreach}
                       </select>
                     </div>
-                    <div class="col-lg-3">
-                      <button class="btn btn-default" type="submit" name="submitAddressInvoice"><i class="icon-refresh"></i> {l s='Change' d='Admin.Orderscustomers.Feature'}</button>
-                    </div>
+
+                      <div class="col-lg-3">
+                        <button class="btn btn-default" type="submit" name="submitAddressInvoice"><i class="icon-refresh"></i> {l s='Change' d='Admin.Orderscustomers.Feature'}</button>
+                      </div>
                   </div>
                 </form>
               {/if}
               <div class="well">
                 <div class="row">
                   <div class="col-sm-6">
-                    <a class="btn btn-default pull-right" href="?tab=AdminAddresses&amp;id_address={$addresses.invoice->id}&amp;addaddress&amp;realedit=1&amp;id_order={$order->id}&amp;address_type=2&amp;back={$smarty.server.REQUEST_URI|urlencode}&amp;token={getAdminToken tab='AdminAddresses'}">
-                      <i class="icon-pencil"></i>
-                      {l s='Edit' d='Admin.Actions'}
-                    </a>
+                    {if !$order->hasInvoice() }
+                      <a class="btn btn-default pull-right" href="?tab=AdminAddresses&amp;id_address={$addresses.invoice->id}&amp;addaddress&amp;realedit=1&amp;id_order={$order->id}&amp;address_type=2&amp;back={$smarty.server.REQUEST_URI|urlencode}&amp;token={getAdminToken tab='AdminAddresses'}">
+                        <i class="icon-pencil"></i>
+                        {l s='Edit' d='Admin.Actions'}
+                      </a>
+                    {/if}
                     {displayAddressDetail address=$addresses.invoice newLine='<br />'}
                     {if $addresses.invoice->other}
                       <hr />{$addresses.invoice->other}<br />

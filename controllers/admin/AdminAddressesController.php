@@ -439,11 +439,13 @@ class AdminAddressesControllerCore extends AdminController
         $address_type = (int) Tools::getValue('address_type') == 2 ? 'invoice' : 'delivery';
 
         if ($this->action == 'save' && ($id_order = (int) Tools::getValue('id_order')) && !count($this->errors) && !empty($address_type)) {
+            $order = new Order($id_order);
             if (!Db::getInstance()->execute('UPDATE ' . _DB_PREFIX_ . 'orders SET `id_address_' . bqSQL($address_type) . '` = ' . (int) $this->object->id . ' WHERE `id_order` = ' . (int) $id_order)) {
                 $this->errors[] = $this->trans('An error occurred while linking this address to its order.', array(), 'Admin.Orderscustomers.Notification');
+            } else if ($order->hasInvoice()) {
+                $this->errors[] = $this->trans('An order\'s address can\'t be modified once its invoice has been created.', array(), 'Admin.Notifications.Error');
             } else {
                 //update order shipping cost
-                $order = new Order($id_order);
                 $order->refreshShippingCost();
 
                 // update cart

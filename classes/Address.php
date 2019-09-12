@@ -374,19 +374,26 @@ class AddressCore extends ObjectModel
     /**
      * Check if Address is used (at least one order placed).
      *
+     * @param int $excludeOrderId
+     *
      * @return int Order count for this Address
      */
-    public function isUsed()
+    public function isUsed(int $excludeOrderId = 0)
     {
         if ((int) $this->id <= 0) {
             return false;
         }
 
-        $result = (int) Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue('
-		SELECT COUNT(`id_order`) AS used
-		FROM `' . _DB_PREFIX_ . 'orders`
-		WHERE `id_address_delivery` = ' . (int) $this->id . '
-		OR `id_address_invoice` = ' . (int) $this->id);
+        $sql = 'SELECT COUNT(`id_order`) AS used
+                FROM `' . _DB_PREFIX_ . 'orders`
+                WHERE `id_address_delivery` = ' . (int) $this->id . '
+                OR `id_address_invoice` = ' . (int) $this->id;
+
+        if ($excludeOrderId > 0) {
+            $sql .= ' AND ' . _DB_PREFIX_ . 'orders.id_order != ' . $excludeOrderId;
+        }
+
+        $result = (int) Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($sql);
 
         return $result > 0 ? (int) $result : false;
     }
