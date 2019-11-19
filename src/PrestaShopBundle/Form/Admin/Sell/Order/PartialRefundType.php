@@ -29,8 +29,8 @@ namespace PrestaShopBundle\Form\Admin\Sell\Order;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use PrestaShopBundle\Form\Type\StyledCheckboxType;
 
 class PartialRefundType extends AbstractType
 {
@@ -44,7 +44,8 @@ class PartialRefundType extends AbstractType
             $builder
                 ->add('quantity_' . $product->getOrderDetailId(), NumberType::class, [
                     'attr' => ['max' => $product->getQuantity(), 'class' => 'refund-quantity'],
-                    'label' => $translator->trans('Qty', [], 'Admin.Orderscustomers.Feature'),
+                    'label' => $translator->trans('Quantity', [], 'Global'),
+                    'invalid_message' => $translator->trans('This field is invalid, it must contain numeric values', [], 'Admin.Notifications.Error'),
                     'required' => false,
                 ])
                 ->add('amount_' . $product->getOrderDetailId(), NumberType::class, [
@@ -54,23 +55,25 @@ class PartialRefundType extends AbstractType
                         $translator->trans('Amount', [], 'Admin.Global'),
                         $taxMethod
                     ),
+                    'invalid_message' => $translator->trans('This field is invalid, it must contain numeric values', [], 'Admin.Notifications.Error'),
                     'required' => false,
                 ]);
         }
         $builder
             ->add('shipping', NumberType::class,
                 [
-                    'label' => 'shipping',
+                    'label' => $translator->trans('Shipping', [], 'Admin.Catalog.Feature'),
+                    'invalid_message' => $translator->trans('The "shipping" field must be a valid number', [], 'Admin.Orderscustomers.Feature'),
                     'required' => false,
                 ]
             )
-            ->add('restock', CheckboxType::class,
+            ->add('restock', StyledCheckboxType::class,
                 [
                     'required' => false,
                     'label' => $translator->trans('Re-stock products', [], 'Admin.Orderscustomers.Feature'),
                 ]
             )
-            ->add('voucher', CheckboxType::class,
+            ->add('voucher', StyledCheckboxType::class,
                 [
                     'required' => false,
                     'label' => $translator->trans('Generate a voucher', [], 'Admin.Orderscustomers.Feature'),

@@ -338,6 +338,7 @@ final class GetOrderForViewingHandler implements GetOrderForViewingHandlerInterf
             $product['quantity_refundable'] = $product['product_quantity'] - $resume['product_quantity'];
             $product['amount_refundable'] = $product['total_price_tax_excl'] - $resume['amount_tax_excl'];
             $product['amount_refundable_tax_incl'] = $product['total_price_tax_incl'] - $resume['amount_tax_incl'];
+            $product['displayed_max_refundable'] = $order->getTaxCalculationMethod() ? $product['amount_refundable'] : $product['amount_refundable_tax_incl'];
             $resumeAmount = $order->getTaxCalculationMethod() ? 'amount_tax_excl' : 'amount_tax_incl';
             $product['amount_refund'] = !is_null($resume[$resumeAmount]) ? $this->locale->formatPrice($resume[$resumeAmount], $currency->iso_code) : null;
             $product['refund_history'] = OrderSlip::getProductSlipDetail($product['id_order_detail']);
@@ -413,6 +414,8 @@ final class GetOrderForViewingHandler implements GetOrderForViewingHandlerInterf
             $imagePath = isset($product['image_tag']) ?
                 $this->imageTagSourceParser->parse($product['image_tag']) :
                 null;
+            $product['product_quantity_refunded'] = $product['product_quantity_refunded'] ?: false;
+            $product['amount_refund'] = $product['amount_refund'] ?: 0;
 
             $productsForViewing[] = new OrderProductForViewing(
                 $product['id_order_detail'],
@@ -426,7 +429,10 @@ final class GetOrderForViewingHandler implements GetOrderForViewingHandlerInterf
                 $product['current_stock'],
                 $imagePath,
                 Tools::ps_round($product['unit_price_tax_excl'], 2),
-                Tools::ps_round($product['unit_price_tax_incl'], 2)
+                Tools::ps_round($product['unit_price_tax_incl'], 2),
+                $product['amount_refund'],
+                $product['product_quantity_refunded'],
+                $this->locale->formatPrice($product['displayed_max_refundable'], $currency->iso_code)
             );
         }
 
@@ -563,13 +569,12 @@ final class GetOrderForViewingHandler implements GetOrderForViewingHandlerInterf
                     $currency->iso_code
                 );
             }
-
             $documentsForViewing[] = new OrderDocumentForViewing(
                 $document->id,
                 $type,
                 new DateTimeImmutable($document->date_add),
                 $number,
-                $document->total_paid_tax_incl,
+                isset($document->total_paid_tax_incl) ?? null,
                 $amount,
                 $amountMismatch,
                 $document instanceof OrderInvoice ? $document->note : null,
@@ -773,6 +778,7 @@ final class GetOrderForViewingHandler implements GetOrderForViewingHandlerInterf
 
         $shipping_refundable_tax_excl = $order->total_shipping_tax_excl;
         $shipping_refundable_tax_incl = $order->total_shipping_tax_incl;
+
         $slips = OrderSlip::getOrdersSlip($customer->id, $order->id);
         foreach ($slips as $slip) {
             $shipping_refundable_tax_excl -= $slip['total_shipping_tax_excl'];

@@ -92,16 +92,21 @@ final class IssuePartialRefundHandler extends AbstractOrderCommandHandler implem
             $orderDetail = new OrderDetail($orderDetailId);
 
             if (empty($refund['amount'])) {
-                $orderDetailList[$orderDetailId]['unit_price'] = $command->getTaxMethod() ?
+                $refund['amount'] = $command->getTaxMethod() ?
                     $orderDetail->unit_price_tax_excl :
                     $orderDetail->unit_price_tax_incl;
-                $orderDetailList[$orderDetailId]['amount'] =
-                    $orderDetail->unit_price_tax_incl * $orderDetailId[$orderDetailId]['quantity'];
-            } else {
-                $orderDetailList[$orderDetailId]['amount'] = (float) str_replace(',', '.', $refund['amount']);
-                $orderDetailList[$orderDetailId]['unit_price'] =
-                    $orderDetailList[$orderDetailId]['amount'] / $orderDetailList[$orderDetailId]['quantity'];
+                $refund['amount'] *= $quantity;
             }
+
+            $orderDetailList[$orderDetailId]['amount'] = (float) str_replace(',', '.', $refund['amount']);
+            $orderDetailList[$orderDetailId]['unit_price'] =
+                    $orderDetailList[$orderDetailId]['amount'] / $orderDetailList[$orderDetailId]['quantity'];
+
+            // add missing fields
+            $orderDetailList[$orderDetailId]['unit_price_tax_excl'] = $orderDetail->unit_price_tax_excl;
+            $orderDetailList[$orderDetailId]['unit_price_tax_incl'] = $orderDetail->unit_price_tax_incl;
+            $orderDetailList[$orderDetailId]['total_price_tax_excl'] = $orderDetail->unit_price_tax_excl * $orderDetailList[$orderDetailId]['quantity'];
+            $orderDetailList[$orderDetailId]['total_price_tax_incl'] = $orderDetail->unit_price_tax_incl * $orderDetailList[$orderDetailId]['quantity'];
 
             $amount += $orderDetailList[$orderDetailId]['amount'];
 
@@ -156,13 +161,13 @@ final class IssuePartialRefundHandler extends AbstractOrderCommandHandler implem
         }
 
         if ($amount > 0) {
-            $orderSlipCreated = !OrderSlip::create(
+            $orderSlipCreated = OrderSlip::create(
                 $order,
                 $orderDetailList,
                 $shippingCostAmount,
                 $voucher,
                 $chosen,
-                $command->getTaxMethod() ? false : true
+                $command->getTaxMethod()
             );
 
             if (!$orderSlipCreated) {
