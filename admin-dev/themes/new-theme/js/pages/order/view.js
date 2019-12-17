@@ -163,4 +163,7 @@ $(() => {
   $(`${OrderViewPageMap.displayPartialRefundBtn}, ${OrderViewPageMap.cancelPartialRefundBtn}`).on('click', (event) => {
     $(OrderViewPageMap.togglePartialRefundForm).toggle();
   });
+  $(OrderViewPageMap.cancelProductBtn).on('click', (event) => {
+    $(OrderViewPageMap.cancelProductToggle).toggle();
+  });
 });

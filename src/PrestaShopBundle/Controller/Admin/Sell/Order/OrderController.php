@@ -34,6 +34,7 @@ use PrestaShop\PrestaShop\Core\Domain\CustomerMessage\Exception\CannotSendEmailE
 use PrestaShop\PrestaShop\Core\Domain\CustomerMessage\Exception\CustomerMessageConstraintException;
 use PrestaShop\PrestaShop\Core\Domain\Order\Command\AddCartRuleToOrderCommand;
 use PrestaShop\PrestaShop\Core\Domain\Order\Command\BulkChangeOrderStatusCommand;
+use PrestaShop\PrestaShop\Core\Domain\Order\Command\CancelOrderProductCommand;
 use PrestaShop\PrestaShop\Core\Domain\Order\Command\ChangeOrderCurrencyCommand;
 use PrestaShop\PrestaShop\Core\Domain\Order\Command\ChangeOrderDeliveryAddressCommand;
 use PrestaShop\PrestaShop\Core\Domain\Order\Command\ChangeOrderInvoiceAddressCommand;
@@ -72,6 +73,7 @@ use PrestaShopBundle\Form\Admin\Sell\Order\OrderPaymentType;
 use PrestaShopBundle\Form\Admin\Sell\Order\UpdateOrderShippingType;
 use PrestaShopBundle\Form\Admin\Sell\Order\UpdateOrderStatusType;
 use PrestaShopBundle\Form\Admin\Sell\Order\UpdateProductInOrderType;
+use PrestaShopBundle\Form\Admin\Sell\Order\CancellationType;
 use PrestaShopBundle\Security\Annotation\AdminSecurity;
 use PrestaShopBundle\Security\Annotation\DemoRestricted;
 use PrestaShopBundle\Service\Grid\ResponseBuilder;
@@ -348,6 +350,11 @@ class OrderController extends FrameworkBundleAdminController
         $formBuilder = $this->get('prestashop.core.form.identifiable_object.builder.partial_refund_form_builder');
         $partialRefundForm = $formBuilder->getFormFor($orderId);
 
+        $cancellationTypeForm = $this->createForm(CancellationType::class, [
+            'products' => $orderForViewing->getProducts()->getProducts(),
+            'translator' => $this->get('translator'),
+        ]);
+
         return $this->render('@PrestaShop/Admin/Sell/Order/Order/view.html.twig', [
             'showContentHeader' => true,
             'meta_title' => $this->trans('Orders', 'Admin.Orderscustomers.Feature'),
@@ -368,6 +375,7 @@ class OrderController extends FrameworkBundleAdminController
             'orderMessageForm' => $orderMessageForm->createView(),
             'backOfficeOrderButtons' => $backOfficeOrderButtons,
             'orderCurrency' => $orderCurrency,
+            'cancellationForm' => $cancellationTypeForm->createView(),
         ]);
     }
 
@@ -394,6 +402,42 @@ class OrderController extends FrameworkBundleAdminController
             $this->addFlash('error', $this->getErrorMessageForException($e, $this->getErrorMessages($e)));
         }
 
+        return $this->redirectToRoute('admin_orders_view', [
+            'orderId' => $orderId,
+        ]);
+    }
+
+    public function cancellationAction(int $orderId, Request $request)
+    {
+        $orderForViewing = $this->getQueryBus()->handle(new GetOrderForViewing($orderId));
+        $form = $this->createForm(CancellationType::class, [
+            'products' => $orderForViewing->getProducts()->getProducts(),
+            'translator' => $this->get('translator'),
+        ]);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $toBeCanceledProducts = [];
+            foreach ($data['products'] as $product) {
+                if ($data['cancellation_' . $product->getOrderDetailId()]) {
+                    $toBeCanceledProducts[$product->getOrderDetailId()] = $data['cancellation_number_' . $product->getOrderDetailId()];
+                }
+            }
+            $command = new CancelOrderProductCommand(
+                $data['products'],
+                $toBeCanceledProducts,
+                $orderForViewing
+            );
+            $status = 'success';
+            $message = $this->trans('The discount was successfully generated.', 'Admin.Catalog.Notification');
+            try {
+                $this->getCommandBus()->handle($command);
+            } catch (OrderException $e) {
+                $status = 'error';
+                $message = $e->getMessage();
+            }
+            $this->addFlash($status, $message);
+        }
         return $this->redirectToRoute('admin_orders_view', [
             'orderId' => $orderId,
         ]);
