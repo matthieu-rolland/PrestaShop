@@ -347,13 +347,11 @@ class OrderController extends FrameworkBundleAdminController
             $hookParameters
         );
 
-        $formBuilder = $this->get('prestashop.core.form.identifiable_object.builder.partial_refund_form_builder');
-        $partialRefundForm = $formBuilder->getFormFor($orderId);
+        $partialRefundFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.partial_refund_form_builder');
+        $partialRefundForm = $partialRefundFormBuilder->getFormFor($orderId);
 
-        $cancellationTypeForm = $this->createForm(CancellationType::class, [
-            'products' => $orderForViewing->getProducts()->getProducts(),
-            'translator' => $this->get('translator'),
-        ]);
+        $cancellationFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.cancellation_form_builder');
+        $cancellationForm = $cancellationFormBuilder->getFormFor($orderId);
 
         return $this->render('@PrestaShop/Admin/Sell/Order/Order/view.html.twig', [
             'showContentHeader' => true,
@@ -375,7 +373,7 @@ class OrderController extends FrameworkBundleAdminController
             'orderMessageForm' => $orderMessageForm->createView(),
             'backOfficeOrderButtons' => $backOfficeOrderButtons,
             'orderCurrency' => $orderCurrency,
-            'cancellationForm' => $cancellationTypeForm->createView(),
+            'cancellationForm' => $cancellationForm->createView(),
         ]);
     }
 
@@ -409,35 +407,20 @@ class OrderController extends FrameworkBundleAdminController
 
     public function cancellationAction(int $orderId, Request $request)
     {
-        $orderForViewing = $this->getQueryBus()->handle(new GetOrderForViewing($orderId));
-        $form = $this->createForm(CancellationType::class, [
-            'products' => $orderForViewing->getProducts()->getProducts(),
-            'translator' => $this->get('translator'),
-        ]);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $data = $form->getData();
-            $toBeCanceledProducts = [];
-            foreach ($data['products'] as $product) {
-                if ($data['cancellation_' . $product->getOrderDetailId()]) {
-                    $toBeCanceledProducts[$product->getOrderDetailId()] = $data['cancellation_number_' . $product->getOrderDetailId()];
-                }
+        $formBuilder = $this->get('prestashop.core.form.identifiable_object.builder.cancellation_form_builder');
+        $formHandler = $this->get('prestashop.core.form.identifiable_object.cancellation_form_handler');
+        $form = $formBuilder->getFormFor($orderId);
+
+        try {
+            $form->handleRequest($request);
+            $result = $formHandler->handleFor($orderId, $form);
+            if ($result->isSubmitted() && $result->isValid()) {
+                $this->addFlash('success', $this->trans('The discount was successfully generated.', 'Admin.Catalog.Notification'));
             }
-            $command = new CancelOrderProductCommand(
-                $data['products'],
-                $toBeCanceledProducts,
-                $orderForViewing
-            );
-            $status = 'success';
-            $message = $this->trans('The discount was successfully generated.', 'Admin.Catalog.Notification');
-            try {
-                $this->getCommandBus()->handle($command);
-            } catch (OrderException $e) {
-                $status = 'error';
-                $message = $e->getMessage();
-            }
-            $this->addFlash($status, $message);
+        } catch (Exception $e) {
+            $this->addFlash('error', $e->getMessage());
         }
+
         return $this->redirectToRoute('admin_orders_view', [
             'orderId' => $orderId,
         ]);

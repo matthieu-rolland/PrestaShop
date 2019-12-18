@@ -27,18 +27,17 @@
 
 namespace PrestaShopBundle\Form\Admin\Sell\Order;
 
-use Symfony\Component\Form\AbstractType;
+use PrestaShopBundle\Form\Admin\Type\TranslatorAwareType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
-class CancellationType extends AbstractType
+class CancellationType extends TranslatorAwareType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $products = $options['data']['products'];
-        $translator = $options['data']['translator'];
 
         foreach ($products as $product) {
             $builder
@@ -47,12 +46,11 @@ class CancellationType extends AbstractType
                         'required' => false,
                         'label' => false,
                         'attr' => [
-                            'class' => 'cancellation-toggle',
                             'material_design' => true,
                         ],
                     ]
                 )
-                ->add('cancellation_number_' . $product->getOrderDetailId(), NumberType::class,
+                ->add('quantity_' . $product->getOrderDetailId(), NumberType::class,
                     [
                         'required' => false,
                         'label' => false,
@@ -63,7 +61,7 @@ class CancellationType extends AbstractType
 
         $builder->add('save', SubmitType::class, [
             'attr' => ['class' => 'cancellation save btn btn-primary ml-3 cancellation-toggle'],
-            'label' => $translator->trans('Cancel products', [], 'Admin.Orderscustomers.Feature'),
+            'label' => $this->trans('Cancel products', 'Admin.Orderscustomers.Feature', []),
         ]);
     }
 }

@@ -111,10 +111,10 @@
               <p>{{ product.quantityRefunded }}{% if product.amountRefund %} ({{ product.amountRefund }} {{ 'Refunded'|trans({}, 'Admin.Orderscustomers.Feature') }}){% endif %}</p>
             </td>
             <td>{{ product.totalPrice }}</td>
-            <td class="cancellation-toggle">{{ form_widget(cancellationForm['cancellation_' ~ product.orderDetailId]) }}</td>
+            <td class="cancellation-toggle cancellation-toggle">{{ form_widget(cancellationForm['cancellation_' ~ product.orderDetailId]) }}</td>
             <td class="cancellation-toggle">
-              {{ form_widget(cancellationForm['cancellation_number_' ~ product.orderDetailId]) }}
-              0 / 3
+              {{ form_widget(cancellationForm['quantity_' ~ product.orderDetailId]) }}
+              0 / {{ product.quantity }}
             </td>
             {% if not orderForViewing.delivered %}
               <td class="text-right product_actions">

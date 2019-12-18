@@ -30,9 +30,9 @@ use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
 use PrestaShop\PrestaShop\Core\Domain\Order\Query\GetOrderForViewing;
 
 /**
- * Provides data for partial refund form in order page
+ * Provides data for product cancellation form in order page
  */
-final class PartialRefundFormDataProvider implements FormDataProviderInterface
+final class CancellationFormDataProvider implements FormDataProviderInterface
 {
     /**
      * @var CommandBusInterface
@@ -58,7 +58,6 @@ final class PartialRefundFormDataProvider implements FormDataProviderInterface
 
         return [
             'products' => $orderForViewing->getProducts()->getProducts(),
-            'taxMethod' => $orderForViewing->getTaxMethod(),
         ];
     }
 

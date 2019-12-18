@@ -31,7 +31,7 @@ use PrestaShop\PrestaShop\Core\Domain\Order\Command\IssuePartialRefundCommand;
 use PrestaShop\PrestaShop\Core\Domain\Order\Query\GetOrderForViewing;
 
 /**
- * Class CurrencyFormDataHandler
+ * Class PartialRefundFormDataHandler
  */
 final class PartialRefundFormDataHandler implements FormDataHandlerInterface
 {
