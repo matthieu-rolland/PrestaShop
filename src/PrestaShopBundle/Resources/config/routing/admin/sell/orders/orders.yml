@@ -212,6 +212,14 @@ admin_orders_partial_refund:
   requirements:
     orderId: \d+
 
+admin_orders_cancellation:
+  path: /{orderId}/cancellation
+  methods: [POST]
+  defaults:
+    _controller: PrestaShopBundle:Admin/Sell/Order/Order:cancellation
+  requirements:
+    orderId: \d+
+
 admin_orders_add_product:
   path: /{orderId}/products
   methods: [POST]
@@ -267,3 +275,4 @@ admin_orders_get_invoices:
     orderId: \d+
   options:
     expose: true
+

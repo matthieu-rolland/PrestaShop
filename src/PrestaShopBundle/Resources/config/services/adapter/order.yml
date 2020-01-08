@@ -136,3 +136,11 @@ services:
     tags:
       - name: tactician.handler
         command: 'PrestaShop\PrestaShop\Core\Domain\Order\Query\GetOrderPreview'
+
+  prestashop.adapter.order.command_handler.cancel_order_product_handler:
+    class: PrestaShop\PrestaShop\Adapter\Order\CommandHandler\CancelOrderProductHandler
+    arguments:
+      - "@prestashop.core.localization.locale.context_locale"
+    tags:
+      - name: tactician.handler
+        command: PrestaShop\PrestaShop\Core\Domain\Order\Command\CancelOrderProductCommand
