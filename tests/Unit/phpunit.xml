@@ -7,7 +7,7 @@
   </php>
     <testsuites>
         <testsuite name="Unit">
-            <directory>.</directory>
+            <directory>./adapter</directory>
         </testsuite>
     </testsuites>
 </phpunit>
