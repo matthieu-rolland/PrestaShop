@@ -3151,7 +3151,8 @@ class ProductCore extends ObjectModel
         $use_group_reduction = true,
         Context $context = null,
         $use_customer_price = true,
-        $id_customization = null
+        $id_customization = null,
+        $debug = false
     ) {
         if (!$context) {
             $context = Context::getContext();
@@ -3257,7 +3258,8 @@ class ProductCore extends ObjectModel
             $use_customer_price,
             $id_cart,
             $cart_quantity,
-            $id_customization
+            $id_customization,
+            $debug
         );
 
         return $return;
@@ -3311,7 +3313,8 @@ class ProductCore extends ObjectModel
         $use_customer_price = true,
         $id_cart = 0,
         $real_quantity = 0,
-        $id_customization = 0
+        $id_customization = 0,
+        $debug = false
     ) {
         static $address = null;
         static $context = null;

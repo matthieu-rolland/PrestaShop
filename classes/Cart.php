@@ -613,7 +613,7 @@ class CartCore extends ObjectModel
      *
      * @return array Products
      */
-    public function getProducts($refresh = false, $id_product = false, $id_country = null, $fullInfos = true)
+    public function getProducts($refresh = false, $id_product = false, $id_country = null, $fullInfos = true, $debug = false)
     {
         if (!$this->id) {
             return [];
@@ -805,7 +805,7 @@ class CartCore extends ObjectModel
                 }
 
                 if (!$row['is_gift'] || (int) $row['cart_quantity'] === $givenAwayQuantity) {
-                    $row = $this->applyProductCalculations($row, $cart_shop_context);
+                    $row = $this->applyProductCalculations($row, $cart_shop_context, null, $debug);
                 } else {
                     // Separate products given away from those manually added to cart
                     $this->_products[] = $this->applyProductCalculations($row, $cart_shop_context, $givenAwayQuantity);
@@ -833,7 +833,7 @@ class CartCore extends ObjectModel
      *
      * @return mixed
      */
-    protected function applyProductCalculations($row, $shopContext, $productQuantity = null)
+    protected function applyProductCalculations($row, $shopContext, $productQuantity = null, $debug= false)
     {
         if (null === $productQuantity) {
             $productQuantity = (int) $row['cart_quantity'];
@@ -936,7 +936,8 @@ class CartCore extends ObjectModel
             true,
             $shopContext,
             true,
-            $row['id_customization']
+            $row['id_customization'],
+            $debug
         );
 
         $row['price'] = $row['price_with_reduction_without_tax'] = Product::getPriceStatic(
@@ -1296,7 +1297,8 @@ class CartCore extends ObjectModel
         $id_address_delivery = 0,
         Shop $shop = null,
         $auto_add_cart_rule = true,
-        $skipAvailabilityCheckOutOfStock = false
+        $skipAvailabilityCheckOutOfStock = false,
+        $debug = false
     ) {
         if (!$shop) {
             $shop = Context::getContext()->shop;
@@ -1468,7 +1470,7 @@ class CartCore extends ObjectModel
         }
 
         // refresh cache of self::_products
-        $this->_products = $this->getProducts(true);
+        $this->_products = $this->getProducts(true, false, null, true, $debug);
         $this->update();
         $context = Context::getContext()->cloneContext();
         $context->cart = $this;

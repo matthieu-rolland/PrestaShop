@@ -508,6 +508,7 @@ class CartControllerCore extends FrontController
                     $this->id_address_delivery,
                     null,
                     true,
+                    true,
                     true
                 );
                 if ($update_quantity < 0) {
