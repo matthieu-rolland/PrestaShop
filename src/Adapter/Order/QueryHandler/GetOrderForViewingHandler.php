@@ -324,7 +324,6 @@ final class GetOrderForViewingHandler extends AbstractOrderHandler implements Ge
         $history = $order->getHistory($this->contextLanguageId);
 
         $statuses = [];
-
         foreach ($history as $item) {
             $statuses[] = new OrderStatusForViewing(
                 (int) $item['id_order_history'],

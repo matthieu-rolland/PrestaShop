@@ -43,6 +43,7 @@ class AdminStatusesControllerCore extends AdminController
             'name' => 'icon',
             'dir' => 'os',
         ];
+        $this->deleted = true;
 
         parent::__construct();
 
@@ -622,7 +623,11 @@ class AdminStatusesControllerCore extends AdminController
             if (!$order_state->isRemovable()) {
                 $this->errors[] = $this->trans('For security reasons, you cannot delete default order statuses.', [], 'Admin.Shopparameters.Notification');
             } else {
-                return parent::postProcess();
+                $order_state->deleted = 1;
+                $order_state->update();
+
+                return;
+                //return parent::postProcess();
             }
         } elseif (Tools::isSubmit('submitBulkdelete' . $this->table)) {
             if (!$this->access('delete')) {
