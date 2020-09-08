@@ -148,7 +148,7 @@ final class UpdateProductInOrderHandler extends AbstractOrderHandler implements 
     ) {
         // assert product exists
         $product = new Product($orderDetail->product_id);
-        if ($product->id !== $orderDetail->product_id) {
+        if ($product->id !== (int) $orderDetail->product_id) {
             throw new CannotUpdateProductInOrderException('You cannot edit the price of a product that no longer exists in your catalog.');
         }
 
