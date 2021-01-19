@@ -26,8 +26,27 @@
 
 namespace PrestaShop\PrestaShop\Core\Configuration;
 
-interface MultiStoreConfiguratorInterface extends DataConfigurationInterface
+use PrestaShop\PrestaShop\Adapter\Configuration;
+use PrestaShop\PrestaShop\Adapter\Shop\Context;
+
+abstract class MultiStoreConfiguratorInterface implements DataConfigurationInterface
 {
+    /**
+     * @var Configuration
+     */
+    protected $configuration;
+
+    /**
+     * @var Context
+     */
+    protected $shopContext;
+
+    public function __construct(Configuration $configuration, Context $shopContext)
+    {
+        $this->configuration = $configuration;
+        $this->shopContext = $shopContext;
+    }
+
     /**
      * Remove fields that are disabled (multistore checkbox unchecked)
      *
@@ -35,5 +54,18 @@ interface MultiStoreConfiguratorInterface extends DataConfigurationInterface
      *
      * @return array
      */
-    public function removeDisabledFields(array $configuration): array;
+    public function removeDisabledFields(array $configuration): array
+    {
+        if ($this->shopContext->isAllShopContext()) {
+            return $configuration;
+        }
+
+        foreach ($configuration as $key => $value) {
+            if (substr($key, 0, 11) !== 'multistore_' && $configuration['multistore_' . $key] !== true) {
+                unset($configuration[$key]);
+            }
+        }
+
+        return $configuration;
+    }
 }

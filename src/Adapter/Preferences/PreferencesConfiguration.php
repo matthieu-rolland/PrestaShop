@@ -94,15 +94,31 @@ class PreferencesConfiguration implements DataConfigurationInterface
         $this->configuration->set('PS_SSL_ENABLED', $configuration['enable_ssl']);
         $this->configuration->set('PS_SSL_ENABLED_EVERYWHERE', $configuration['enable_ssl_everywhere']);
         $this->configuration->set('PS_TOKEN_ENABLE', $configuration['enable_token']);
-        $this->configuration->set('PS_ALLOW_HTML_IFRAME', $configuration['allow_html_iframes']);
-        $this->configuration->set('PS_USE_HTMLPURIFIER', $configuration['use_htmlpurifier']);
-        $this->configuration->set('PS_PRICE_ROUND_MODE', $configuration['price_round_mode']);
-        $this->configuration->set('PS_ROUND_TYPE', $configuration['price_round_type']);
-        $this->configuration->set('PS_DISPLAY_SUPPLIERS', $configuration['display_suppliers']);
-        $this->configuration->set('PS_DISPLAY_MANUFACTURERS', $configuration['display_manufacturers']);
-        $this->configuration->set('PS_DISPLAY_BEST_SELLERS', $configuration['display_best_sellers']);
+        if (isset($configuration['allow_html_iframes'])) {
+            $this->configuration->set('PS_ALLOW_HTML_IFRAME', $configuration['allow_html_iframes']);
+        }
+        if (isset($configuration['use_htmlpurifier'])) {
+            $this->configuration->set('PS_USE_HTMLPURIFIER', $configuration['use_htmlpurifier']);
+        }
+        if (isset($configuration['price_round_mode'])) {
+            $this->configuration->set('PS_PRICE_ROUND_MODE', $configuration['price_round_mode']);
+        }
+        if (isset($configuration['price_round_type'])) {
+            $this->configuration->set('PS_ROUND_TYPE', $configuration['price_round_type']);
+        }
+        if (isset($configuration['display_suppliers'])) {
+            $this->configuration->set('PS_DISPLAY_SUPPLIERS', $configuration['display_suppliers']);
+        }
+        if (isset($configuration['display_manufacturers'])) {
+            $this->configuration->set('PS_DISPLAY_MANUFACTURERS', $configuration['display_manufacturers']);
+        }
+        if (isset($configuration['display_best_sellers'])) {
+            $this->configuration->set('PS_DISPLAY_BEST_SELLERS', $configuration['display_best_sellers']);
+        }
         $this->configuration->set('PS_MULTISHOP_FEATURE_ACTIVE', $configuration['multishop_feature_active']);
-        $this->configuration->set('PS_SHOP_ACTIVITY', $configuration['shop_activity']);
+        if (isset($configuration['shop_activity'])) {
+            $this->configuration->set('PS_SHOP_ACTIVITY', $configuration['shop_activity']);
+        }
 
         return [];
     }
@@ -133,13 +149,6 @@ class PreferencesConfiguration implements DataConfigurationInterface
             $configuration['enable_ssl'],
             $configuration['enable_ssl_everywhere'],
             $configuration['enable_token'],
-            $configuration['allow_html_iframes'],
-            $configuration['use_htmlpurifier'],
-            $configuration['price_round_mode'],
-            $configuration['price_round_type'],
-            $configuration['display_suppliers'],
-            $configuration['display_manufacturers'],
-            $configuration['display_best_sellers'],
             $configuration['multishop_feature_active']
         );
     }

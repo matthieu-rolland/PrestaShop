@@ -27,6 +27,7 @@
 namespace PrestaShopBundle\Form\Admin\Configure\ShopParameters\General;
 
 use PrestaShop\PrestaShop\Adapter\Entity\Order;
+use PrestaShopBundle\Form\Admin\Type\MultistoreConfigurationType;
 use PrestaShopBundle\Form\Admin\Type\SwitchType;
 use PrestaShopBundle\Form\Admin\Type\TranslatorAwareType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -117,6 +118,7 @@ class PreferencesType extends TranslatorAwareType
                     'Increase front office security',
                     'Admin.Shopparameters.Feature'
                 ),
+
                 'help' => $this->trans(
                     'Enable or disable token in the Front Office to improve PrestaShop\'s security.',
                     'Admin.Shopparameters.Help'
@@ -131,6 +133,9 @@ class PreferencesType extends TranslatorAwareType
                     'Allow iframes on text fields like product description. We recommend that you leave this option disabled.',
                     'Admin.Shopparameters.Help'
                 ),
+                'attr' => [
+                    'multistore_configuration_key' => 'PS_ALLOW_HTML_IFRAME',
+                ],
             ])
             ->add('use_htmlpurifier', SwitchType::class, [
                 'label' => $this->trans(
@@ -141,6 +146,9 @@ class PreferencesType extends TranslatorAwareType
                     'Clean the HTML content on text fields. We recommend that you leave this option enabled.',
                     'Admin.Shopparameters.Help'
                 ),
+                'attr' => [
+                    'multistore_configuration_key' => 'PS_USE_HTMLPURIFIER',
+                ],
             ])
             ->add(
                 'price_round_mode', ChoiceType::class, [
@@ -159,6 +167,9 @@ class PreferencesType extends TranslatorAwareType
                         'You can choose among 6 different ways of rounding prices. "Round up away from zero ..." is the recommended behavior.',
                         'Admin.Shopparameters.Help'
                     ),
+                    'attr' => [
+                        'multistore_configuration_key' => 'PS_PRICE_ROUND_MODE',
+                    ],
                 ])
             ->add('price_round_type', ChoiceType::class, [
                 'placeholder' => false,
@@ -173,6 +184,9 @@ class PreferencesType extends TranslatorAwareType
                     'You can choose when to round prices: either on each item, each line or the total (of an invoice, for example).',
                     'Admin.Shopparameters.Help'
                 ),
+                'attr' => [
+                    'multistore_configuration_key' => 'PS_ROUND_TYPE',
+                ],
             ])
             ->add(
                 'display_suppliers', SwitchType::class, [
@@ -181,6 +195,9 @@ class PreferencesType extends TranslatorAwareType
                         'Enable suppliers page on your front office even when its module is disabled.',
                         'Admin.Shopparameters.Help'
                     ),
+                    'attr' => [
+                        'multistore_configuration_key' => 'PS_DISPLAY_SUPPLIERS',
+                    ],
                 ])
             ->add(
                 'display_manufacturers', SwitchType::class, [
@@ -189,6 +206,9 @@ class PreferencesType extends TranslatorAwareType
                         'Enable brands page on your front office even when its module is disabled.',
                         'Admin.Shopparameters.Help'
                     ),
+                    'attr' => [
+                        'multistore_configuration_key' => 'PS_DISPLAY_MANUFACTURERS',
+                    ],
                 ])
             ->add(
                 'display_best_sellers', SwitchType::class, [
@@ -197,6 +217,9 @@ class PreferencesType extends TranslatorAwareType
                         'Enable best sellers page on your front office even when its respective module is disabled.',
                         'Admin.Shopparameters.Help'
                     ),
+                    'attr' => [
+                        'multistore_configuration_key' => 'PS_DISPLAY_BEST_SELLERS',
+                    ],
                 ])
             ->add('multishop_feature_active', SwitchType::class, [
                 'disabled' => !$this->isContextDependantOptionEnabled(),
@@ -234,6 +257,9 @@ class PreferencesType extends TranslatorAwareType
                 ],
                 'label' => $this->trans('Main Shop Activity', 'Admin.Shopparameters.Feature'),
                 'choice_translation_domain' => 'Install',
+                'attr' => [
+                    'multistore_configuration_key' => 'PS_SHOP_ACTIVITY',
+                ],
             ]);
     }
 
@@ -277,5 +303,15 @@ class PreferencesType extends TranslatorAwareType
         }
 
         return $this->isAllShopContext;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @see MultistoreConfigurationTypeExtension
+     */
+    public function getParent(): string
+    {
+        return MultistoreConfigurationType::class;
     }
 }
