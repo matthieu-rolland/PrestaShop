@@ -63,7 +63,6 @@ class MultistoreController extends FrameworkBundleAdminController
             ]);
         }
 
-        $shop = null;
         $isShopContext = $this->multistoreContext->isShopContext();
         if ($isShopContext) {
             $currentContext = $this->entityManager->getRepository(Shop::class)->findOneById($this->multistoreContext->getContextShopID());
