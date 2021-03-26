@@ -31,6 +31,7 @@ namespace PrestaShopBundle\Service\Form;
 use PrestaShop\PrestaShop\Adapter\Shop\Context;
 use PrestaShop\PrestaShop\Core\Domain\Configuration\ShopConfigurationInterface;
 use PrestaShop\PrestaShop\Core\Domain\Shop\ValueObject\ShopConstraint;
+use PrestaShop\PrestaShop\Core\Employee\MultistoreNotification;
 use PrestaShop\PrestaShop\Core\Feature\FeatureInterface;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormInterface;
@@ -71,6 +72,11 @@ class MultistoreCheckboxEnabler
     private $multiStoreContext;
 
     /**
+     * @var MultistoreNotification
+     */
+    private $multistoreNotification;
+
+    /**
      * MultistoreCheckboxEnabler constructor.
      *
      * @param FeatureInterface $multistoreFeature
@@ -80,11 +86,13 @@ class MultistoreCheckboxEnabler
     public function __construct(
         FeatureInterface $multistoreFeature,
         ShopConfigurationInterface $configuration,
-        Context $multiStoreContext
+        Context $multiStoreContext,
+        MultistoreNotification $multistoreNotification
     ) {
         $this->multistoreFeature = $multistoreFeature;
         $this->configuration = $configuration;
         $this->multiStoreContext = $multiStoreContext;
+        $this->multistoreNotification = $multistoreNotification;
     }
 
     /**
@@ -106,6 +114,7 @@ class MultistoreCheckboxEnabler
      */
     public function addCheckboxes(FormInterface &$form): void
     {
+        $checkboxNotificationAdded = false;
         foreach ($form->all() as $child) {
             $options = $child->getConfig()->getOptions();
             if (!isset($options['attr']['multistore_configuration_key'])) {
@@ -140,6 +149,43 @@ class MultistoreCheckboxEnabler
                     'multistore_configuration_key' => $options['attr']['multistore_configuration_key'],
                 ],
             ]);
+
+            if (!$checkboxNotificationAdded) {
+                $this->addCheckboxNotification();
+                $checkboxNotificationAdded = true;
+            }
+        }
+    }
+
+    private function addCheckboxNotification()
+    {
+        if (!empty($this->multiStoreContext->getContextShopId())) {
+            $key = 'shop_' . $this->multiStoreContext->getContextShopId();
+        } elseif (!empty($this->multiStoreContext->getContextShopGroup()->id)) {
+            $key = 'group_' . $this->multiStoreContext->getContextShopGroup()->id;
+        } else {
+            return;
+        }
+
+        $checkboxNotificationData = $this->multistoreNotification->getNotificationData(
+            1,
+            MultistoreNotification::CHECKBOX_NOTIFICATIONS_KEY
+        );
+
+        $checkboxNotificationData = $checkboxNotificationData ?? [];
+
+        // message is display by default
+        if (empty($checkboxNotificationData[$key])) {
+            $checkboxNotificationData[$key] = true;
+            $this->multistoreNotification->setNotificationData(
+                1,
+                MultistoreNotification::CHECKBOX_NOTIFICATIONS_KEY,
+                $checkboxNotificationData
+            );
+        }
+
+        if ($checkboxNotificationData[$key]) {
+            $this->multistoreNotification->displayMultistoreCheckboxNotification();
         }
     }
 }

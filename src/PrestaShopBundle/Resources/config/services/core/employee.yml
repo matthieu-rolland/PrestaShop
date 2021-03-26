@@ -13,3 +13,8 @@ services:
     arguments:
       - '@prestashop.adapter.employee.data_provider'
       - '@=service("prestashop.adapter.legacy.configuration").getInt("_PS_ADMIN_PROFILE_")'
+
+  prestashop.core.employee.multistore_notification:
+    class: 'PrestaShop\PrestaShop\Core\Employee\MultistoreNotification'
+    arguments:
+      - '@session'

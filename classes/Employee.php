@@ -107,6 +107,11 @@ class EmployeeCore extends ObjectModel
     public $has_enabled_gravatar = false;
 
     /**
+     * @var string
+     */
+    public $notifications;
+
+    /**
      * @see ObjectModel::$definition
      */
     public static $definition = [
@@ -139,6 +144,7 @@ class EmployeeCore extends ObjectModel
             'reset_password_token' => ['type' => self::TYPE_STRING, 'validate' => 'isSha1', 'size' => 40, 'copy_post' => false],
             'reset_password_validity' => ['type' => self::TYPE_DATE, 'validate' => 'isDateOrNull', 'copy_post' => false],
             'has_enabled_gravatar' => ['type' => self::TYPE_BOOL, 'validate' => 'isBool'],
+            'notifications' => ['type' => self::TYPE_STRING],
         ],
     ];
 

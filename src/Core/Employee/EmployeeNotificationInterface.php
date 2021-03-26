@@ -27,33 +27,22 @@
 namespace PrestaShop\PrestaShop\Core\Employee;
 
 /**
- * Interface EmployeeDataProviderInterface describes an employee data provider.
+ * Interface EmployeeNotificationInterface describes an employee's notification settings
  */
-interface EmployeeDataProviderInterface
+interface EmployeeNotificationInterface
 {
     /**
-     * Get employee's hashed password by employee's ID.
-     *
      * @param int $employeeId
-     *
-     * @return string
-     */
-    public function getEmployeeHashedPassword($employeeId);
-
-    /**
-     * Checks if employee is a super admin.
-     *
-     * @param int $employeeId
-     *
+     * @param string $notificationKey
+     * @param array $data
      * @return bool
      */
-    public function isSuperAdmin($employeeId);
+    public function setNotificationData(int $employeeId, string $notificationKey,array $data): void;
 
     /**
-     * Get employee's notifications's settings
-     *
      * @param int $employeeId
-     * @return sring|null
+     * @param string $notificationKey
+     * @return array
      */
-    public function getNotifications(int $employeeId): ?string;
+    public function getNotificationData(int $employeeId, string $notificationKey): ?array;
 }

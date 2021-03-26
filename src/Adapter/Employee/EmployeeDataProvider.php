@@ -53,4 +53,11 @@ final class EmployeeDataProvider implements EmployeeDataProviderInterface
 
         return $employee->isSuperAdmin();
     }
+
+    public function getNotifications(int $employeeId): ?string
+    {
+        $employee = new Employee($employeeId);
+
+        return $employee->notifications;
+    }
 }
