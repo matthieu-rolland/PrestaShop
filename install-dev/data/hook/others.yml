@@ -1,0 +1,512 @@
+actionAuthentication:
+    name: actionAuthentication
+    title: 'Successful customer authentication'
+    description: 'This hook is displayed after a customer successfully signs in'
+actionBuildFrontEndObject:
+    name: actionBuildFrontEndObject
+    title: 'Manage elements added to the "prestashop" javascript object'
+    description: 'This hook allows you to customize the "prestashop" javascript object that is included in all front office pages'
+actionBuildMailLayoutVariables:
+    name: actionBuildMailLayoutVariables
+    title: 'Build the variables used in email layout rendering'
+    description: 'This hook allows to change the variables used when an email layout is rendered'
+actionCarrierProcess:
+    name: actionCarrierProcess
+    title: 'Carrier process'
+    description: ''
+actionCarrierUpdate:
+    name: actionCarrierUpdate
+    title: 'Carrier Update'
+    description: 'This hook is called when a carrier is updated'
+actionCartSave:
+    name: actionCartSave
+    title: 'Cart creation and update'
+    description: 'This hook is displayed when a product is added to the cart or if the cart''s content is modified'
+actionCheckoutRender:
+    name: actionCheckoutRender
+    title: 'Modify checkout process'
+    description: 'This hook is called when constructing the checkout process'
+actionClearCache:
+    name: actionClearCache
+    title: 'Clear smarty cache'
+    description: 'This hook is called when smarty''s cache is cleared'
+actionClearCompileCache:
+    name: actionClearCompileCache
+    title: 'Clear smarty compile cache'
+    description: 'This hook is called when smarty''s compile cache is cleared'
+actionClearSf2Cache:
+    name: actionClearSf2Cache
+    title: 'Clear Sf2 cache'
+    description: 'This hook is called when the Symfony cache is cleared'
+actionControllerInitAfter:
+    name: actionControllerInitAfter
+    title: 'Perform actions after controller initialization'
+    description: 'This hook is launched after the initialization of all controllers'
+actionControllerInitBefore:
+    name: actionControllerInitBefore
+    title: 'Perform actions before controller initialization'
+    description: 'This hook is launched before the initialization of all controllers'
+actionCreditSlipForm:
+    name: actionCreditSlipForm
+    title: 'Modify credit slip options form content'
+    description: 'This hook allows to modify credit slip options form FormBuilder'
+actionCreditSlipGridDataModifier:
+    name: actionCreditSlipGridDataModifier
+    title: 'Modify credit slip grid data'
+    description: 'This hook allows to modify credit slip grid data'
+actionCreditSlipGridDefinitionModifier:
+    name: actionCreditSlipGridDefinitionModifier
+    title: 'Modify credit slip grid definition'
+    description: 'This hook allows to alter credit slip grid columns, actions and filters'
+actionCreditSlipGridFilterFormModifier:
+    name: actionCreditSlipGridFilterFormModifier
+    title: 'Modify credit slip grid filters'
+    description: 'This hook allows to modify filters for credit slip grid'
+actionCreditSlipGridPresenterModifier:
+    name: actionCreditSlipGridPresenterModifier
+    title: 'Modify credit slip grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for credit slip grid'
+actionCreditSlipGridQueryBuilderModifier:
+    name: actionCreditSlipGridQueryBuilderModifier
+    title: 'Modify credit slip grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for credit slip grid'
+actionCreditSlipSave:
+    name: actionCreditSlipSave
+    title: 'Modify credit slip options form saved data'
+    description: 'This hook allows to modify data of credit slip options form after it was saved'
+actionDispatcherAfter:
+    name: actionDispatcherAfter
+    title: 'After dispatch'
+    description: 'This hook is called at the end of the dispatch method of the Dispatcher'
+actionDispatcherBefore:
+    name: actionDispatcherBefore
+    title: 'Before dispatch'
+    description: 'This hook is called at the beginning of the dispatch method of the Dispatcher'
+actionFrontControllerInitAfter:
+    name: actionFrontControllerInitAfter
+    title: 'Perform actions after front office controller initialization'
+    description: 'This hook is launched after the initialization of all front office controllers'
+actionFrontControllerInitBefore:
+    name: actionFrontControllerInitBefore
+    title: 'Perform actions before front office controller initialization'
+    description: 'This hook is launched before the initialization of all front office controllers'
+actionFrontControllerSetVariables:
+    name: actionFrontControllerSetVariables
+    title: 'Add variables in JavaScript object and Smarty templates'
+    description: 'Add variables to javascript object that is available in Front Office. These are also available in smarty templates in modules.your_module_name.'
+actionGeneralPageForm:
+    name: actionGeneralPageForm
+    title: 'Modify general page options form content'
+    description: 'This hook allows to modify general page options form FormBuilder'
+actionGeneralPageSave:
+    name: actionGeneralPageSave
+    title: 'Modify general page options form saved data'
+    description: 'This hook allows to modify data of general page options form after it was saved'
+actionGeolocationPageForm:
+    name: actionGeolocationPageForm
+    title: 'Modify geolocation page options form content'
+    description: 'This hook allows to modify geolocation page options form FormBuilder'
+actionGeolocationPageSave:
+    name: actionGeolocationPageSave
+    title: 'Modify geolocation page options form saved data'
+    description: 'This hook allows to modify data of geolocation page options form after it was saved'
+actionGetMailLayoutTransformations:
+    name: actionGetMailLayoutTransformations
+    title: 'Define the transformation to apply on layout'
+    description: 'This hook allows to add/remove TransformationInterface used to generate an email layout'
+actionGetMailThemeFolder:
+    name: actionGetMailThemeFolder
+    title: 'Define the folder of an email theme'
+    description: 'This hook allows to change the folder of an email theme (useful if you theme is in a module for example)'
+actionHtaccessCreate:
+    name: actionHtaccessCreate
+    title: 'After htaccess creation'
+    description: 'This hook is displayed after the htaccess creation'
+actionListMailThemes:
+    name: actionListMailThemes
+    title: 'List the available email themes and layouts'
+    description: 'This hook allows to add/remove available email themes (ThemeInterface) and/or to add/remove their layouts (LayoutInterface)'
+actionLocalizationPageForm:
+    name: actionLocalizationPageForm
+    title: 'Modify localization page options form content'
+    description: 'This hook allows to modify localization page options form FormBuilder'
+actionLocalizationPageSave:
+    name: actionLocalizationPageSave
+    title: 'Modify localization page options form saved data'
+    description: 'This hook allows to modify data of localization page options form after it was saved'
+actionLogsGridDataModifier:
+    name: actionLogsGridDataModifier
+    title: 'Modify logs grid data'
+    description: 'This hook allows to modify logs grid data'
+actionLogsGridDefinitionModifier:
+    name: actionLogsGridDefinitionModifier
+    title: 'Modifying Logs grid definition'
+    description: 'This hook allows to alter Logs grid columns, actions and filters'
+actionLogsGridFilterFormModifier:
+    name: actionLogsGridFilterFormModifier
+    title: 'Modify filters form for Logs grid'
+    description: 'This hook allows to alter filters form used in Logs'
+actionLogsGridPresenterModifier:
+    name: actionLogsGridPresenterModifier
+    title: 'Modify Logs grid view data'
+    description: 'This hook allows to alter presented Logs grid data'
+actionLogsGridQueryBuilderModifier:
+    name: actionLogsGridQueryBuilderModifier
+    title: 'Modify Logs grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for Logs grid'
+actionLogsPageForm:
+    name: actionLogsPageForm
+    title: 'Modify logs page options form content'
+    description: 'This hook allows to modify logs page options form FormBuilder'
+actionLogsPageSave:
+    name: actionLogsPageSave
+    title: 'Modify logs page options form saved data'
+    description: 'This hook allows to modify data of logs page options form after it was saved'
+actionMailThemeForm:
+    name: actionMailThemeForm
+    title: 'Modify mail theme options form content'
+    description: 'This hook allows to modify mail theme options form FormBuilder'
+actionMailThemeSave:
+    name: actionMailThemeSave
+    title: 'Modify mail theme options form saved data'
+    description: 'This hook allows to modify data of mail theme options form after it was saved'
+actionMaintenancePageForm:
+    name: actionMaintenancePageForm
+    title: 'Manage Maintenance Page form fields'
+    description: 'This hook adds, update or remove fields of the Maintenance Page form'
+actionMaintenancePageSave:
+    name: actionMaintenancePageSave
+    title: 'Modify maintenance page options form saved data'
+    description: 'This hook allows to modify data of maintenance page options form after it was saved'
+actionMerchandiseReturnForm:
+    name: actionMerchandiseReturnForm
+    title: 'Modify merchandise return options form content'
+    description: 'This hook allows to modify merchandise return options form FormBuilder'
+actionMerchandiseReturnGridDataModifier:
+    name: actionMerchandiseReturnGridDataModifier
+    title: 'Modify merchandise return grid data'
+    description: 'This hook allows to modify merchandise return grid data'
+actionMerchandiseReturnGridDefinitionModifier:
+    name: actionMerchandiseReturnGridDefinitionModifier
+    title: 'Modify merchandise return grid definition'
+    description: 'This hook allows to alter merchandise return grid columns, actions and filters'
+actionMerchandiseReturnGridFilterFormModifier:
+    name: actionMerchandiseReturnGridFilterFormModifier
+    title: 'Modify merchandise return grid filters'
+    description: 'This hook allows to modify filters for merchandise return grid'
+actionMerchandiseReturnGridPresenterModifier:
+    name: actionMerchandiseReturnGridPresenterModifier
+    title: 'Modify merchandise return grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for merchandise return grid'
+actionMerchandiseReturnGridQueryBuilderModifier:
+    name: actionMerchandiseReturnGridQueryBuilderModifier
+    title: 'Modify merchandise return grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for merchandise return grid'
+actionMerchandiseReturnSave:
+    name: actionMerchandiseReturnSave
+    title: 'Modify merchandise return options form saved data'
+    description: 'This hook allows to modify data of merchandise return options form after it was saved'
+actionModuleInstallAfter:
+    name: actionModuleInstallAfter
+    title: actionModuleInstallAfter
+    description: ''
+actionModuleInstallBefore:
+    name: actionModuleInstallBefore
+    title: actionModuleInstallBefore
+    description: ''
+actionModuleUninstallAfter:
+    name: actionModuleUninstallAfter
+    title: actionModuleUninstallAfter
+    description: ''
+actionModuleUninstallBefore:
+    name: actionModuleUninstallBefore
+    title: actionModuleUninstallBefore
+    description: ''
+actionOutputHTMLBefore:
+    name: actionOutputHTMLBefore
+    title: 'Before HTML output'
+    description: 'This hook is used to filter the whole HTML page before it is rendered (only front)'
+actionPaymentCCAdd:
+    name: actionPaymentCCAdd
+    title: 'Payment CC added'
+    description: ''
+actionPaymentConfirmation:
+    name: actionPaymentConfirmation
+    title: 'Payment confirmation'
+    description: 'This hook displays new elements after the payment is validated'
+actionPaymentPreferencesForm:
+    name: actionPaymentPreferencesForm
+    title: 'Modify payment preferences options form content'
+    description: 'This hook allows to modify payment preferences options form FormBuilder'
+actionPaymentPreferencesSave:
+    name: actionPaymentPreferencesSave
+    title: 'Modify payment preferences options form saved data'
+    description: 'This hook allows to modify data of payment preferences options form after it was saved'
+actionPerformancePageForm:
+    name: actionPerformancePageForm
+    title: 'Manage Performance Page form fields'
+    description: 'This hook adds, update or remove fields of the Performance Page form'
+actionPerformancePageSave:
+    name: actionPerformancePageSave
+    title: 'Modify performance page options form saved data'
+    description: 'This hook allows to modify data of performance page options form after it was saved'
+actionPresentCart:
+    name: actionPresentCart
+    title: 'Cart Presenter'
+    description: 'This hook is called before a cart is presented'
+actionShippingPreferencesPageForm:
+    name: actionShippingPreferencesPageForm
+    title: 'Modify shipping preferences page options form content'
+    description: 'This hook allows to modify shipping preferences page options form FormBuilder'
+actionShippingPreferencesPageSave:
+    name: actionShippingPreferencesPageSave
+    title: 'Modify shipping preferences page options form saved data'
+    description: 'This hook allows to modify data of shipping preferences page options form after it was saved'
+actionShopLogoForm:
+    name: actionShopLogoForm
+    title: 'Modify shop logo options form content'
+    description: 'This hook allows to modify shop logo options form FormBuilder'
+actionShopLogoSave:
+    name: actionShopLogoSave
+    title: 'Modify shop logo options form saved data'
+    description: 'This hook allows to modify data of shop logo options form after it was saved'
+actionSupplierGridDataModifier:
+    name: actionSupplierGridDataModifier
+    title: 'Modify supplier grid data'
+    description: 'This hook allows to modify supplier grid data'
+actionSupplierGridDefinitionModifier:
+    name: actionSupplierGridDefinitionModifier
+    title: 'Modify supplier grid definition'
+    description: 'This hook allows to alter supplier grid columns, actions and filters'
+actionSupplierGridFilterFormModifier:
+    name: actionSupplierGridFilterFormModifier
+    title: 'Modify supplier grid filters'
+    description: 'This hook allows to modify filters for supplier grid'
+actionSupplierGridPresenterModifier:
+    name: actionSupplierGridPresenterModifier
+    title: 'Modify supplier grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for supplier grid'
+actionSupplierGridQueryBuilderModifier:
+    name: actionSupplierGridQueryBuilderModifier
+    title: 'Modify supplier grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for supplier grid'
+actionUpdateLangAfter:
+    name: actionUpdateLangAfter
+    title: 'Update "lang" tables'
+    description: 'Update "lang" tables after adding or updating a language'
+actionUpdateQuantity:
+    name: actionUpdateQuantity
+    title: 'Quantity update'
+    description: 'Quantity is updated only when a customer effectively places their order'
+actionWatermark:
+    name: actionWatermark
+    title: Watermark
+    description: ''
+displayAdminEndContent:
+    name: displayAdminEndContent
+    title: 'Administration end of content'
+    description: 'This hook is displayed at the end of the main content, before the footer'
+displayAdminGridTableAfter:
+    name: displayAdminGridTableAfter
+    title: 'Display after Grid table'
+    description: 'This hook adds new blocks after Grid component table'
+displayAdminGridTableBefore:
+    name: displayAdminGridTableBefore
+    title: 'Display before Grid table'
+    description: 'This hook adds new blocks before Grid component table'
+displayAdminStatsGraphEngine:
+    name: displayAdminStatsGraphEngine
+    title: 'Graph engines'
+    description: ''
+displayAdminStatsGridEngine:
+    name: displayAdminStatsGridEngine
+    title: 'Grid engines'
+    description: ''
+displayAdminStatsModules:
+    name: displayAdminStatsModules
+    title: 'Stats - Modules'
+    description: ''
+displayAfterBodyOpeningTag:
+    name: displayAfterBodyOpeningTag
+    title: 'Very top of pages'
+    description: 'Use this hook for advertisement or modals you want to load first'
+displayAfterCarrier:
+    name: displayAfterCarrier
+    title: 'After carriers list'
+    description: 'This hook is displayed after the carrier list in Front Office'
+displayAfterTitleTag:
+    name: displayAfterTitleTag
+    title: 'After title tag'
+    description: 'Use this hook to add content after title tag'
+displayAuthenticateFormBottom:
+    name: displayAuthenticateFormBottom
+    title: 'Customer authentication form'
+    description: 'This hook displays some information on the bottom of the authentication form'
+displayBackOfficeFooter:
+    name: displayBackOfficeFooter
+    title: 'Administration panel footer'
+    description: 'This hook is displayed within the admin panel''s footer'
+displayBackOfficeHeader:
+    name: displayBackOfficeHeader
+    title: 'Administration panel header'
+    description: 'This hook is displayed in the header of the admin panel'
+displayBackOfficeHome:
+    name: displayBackOfficeHome
+    title: 'Administration panel homepage'
+    description: 'This hook is displayed on the admin panel''s homepage'
+displayBackOfficeTop:
+    name: displayBackOfficeTop
+    title: 'Administration panel hover the tabs'
+    description: 'This hook is displayed on the roll hover of the tabs within the admin panel'
+displayBanner:
+    name: displayBanner
+    title: 'Very top of pages'
+    description: 'Use this hook for banners on top of every pages'
+displayBeforeBodyClosingTag:
+    name: displayBeforeBodyClosingTag
+    title: 'Very bottom of pages'
+    description: 'Use this hook for your modals or any content you want to load at the very end'
+displayBeforeCarrier:
+    name: displayBeforeCarrier
+    title: 'Before carriers list'
+    description: 'This hook is displayed before the carrier list in Front Office'
+displayCarrierExtraContent:
+    name: displayCarrierExtraContent
+    title: 'Display additional content for a carrier (e.g pickup points)'
+    description: 'This hook calls only the module related to the carrier, in order to add options when needed'
+displayCarrierList:
+    name: displayCarrierList
+    title: 'Extra carrier (module mode)'
+    description: ''
+displayCartModalContent:
+    name: displayCartModalContent
+    title: 'Content of Add-to-cart modal'
+    description: 'This hook displays content in the middle of the window that appears after adding product to cart'
+displayCartModalFooter:
+    name: displayCartModalFooter
+    title: 'Bottom of Add-to-cart modal'
+    description: 'This hook displays content in the bottom of window that appears after adding product to cart'
+displayContentWrapperBottom:
+    name: displayContentWrapperBottom
+    title: 'Content wrapper section (bottom)'
+    description: 'This hook displays new elements in the bottom of the content wrapper'
+displayContentWrapperTop:
+    name: displayContentWrapperTop
+    title: 'Content wrapper section (top)'
+    description: 'This hook displays new elements in the top of the content wrapper'
+displayDashboardToolbarIcons:
+    name: displayDashboardToolbarIcons
+    title: 'Display new elements in back office page with dashboard, on icons list'
+    description: 'This hook launches modules when the back office with dashboard is displayed'
+displayDashboardToolbarTopMenu:
+    name: displayDashboardToolbarTopMenu
+    title: 'Display new elements in back office page with a dashboard, on top Menu'
+    description: 'This hook launches modules when a page with a dashboard is displayed'
+displayDashboardTop:
+    name: displayDashboardTop
+    title: 'Dashboard Top'
+    description: 'Displays the content in the dashboard''s top area'
+displayFooter:
+    name: displayFooter
+    title: Footer
+    description: 'This hook displays new blocks in the footer'
+displayHeader:
+    name: displayHeader
+    title: 'Pages html head section'
+    description: 'This hook adds additional elements in the head section of your pages (head section of html)'
+displayHome:
+    name: displayHome
+    title: 'Homepage content'
+    description: 'This hook displays new elements on the homepage'
+displayInvoice:
+    name: displayInvoice
+    title: Invoice
+    description: 'This hook displays new blocks on the invoice (order)'
+displayInvoiceLegalFreeText:
+    name: displayInvoiceLegalFreeText
+    title: 'PDF Invoice - Legal Free Text'
+    description: 'This hook allows you to modify the legal free text on PDF invoices'
+displayLeftColumn:
+    name: displayLeftColumn
+    title: 'Left column blocks'
+    description: 'This hook displays new elements in the left-hand column'
+displayMaintenance:
+    name: displayMaintenance
+    title: 'Maintenance Page'
+    description: 'This hook displays new elements on the maintenance page'
+displayMyAccountBlock:
+    name: displayMyAccountBlock
+    title: 'My account block'
+    description: 'This hook displays extra information within the ''my account'' block"'
+displayNav:
+    name: displayNav
+    title: Navigation
+    description: ''
+displayNavFullWidth:
+    name: displayNavFullWidth
+    title: Navigation
+    description: 'This hook displays full width navigation menu at the top of your pages'
+displayOverrideTemplate:
+    name: displayOverrideTemplate
+    title: 'Change the default template of current controller'
+    description: ''
+displayPDFInvoice:
+    name: displayPDFInvoice
+    title: 'PDF Invoice'
+    description: 'This hook allows you to display additional information on PDF invoices'
+displayPaymentByBinaries:
+    name: displayPaymentByBinaries
+    title: 'Payment form generated by binaries'
+    description: 'This hook displays form generated by binaries during the checkout'
+displayPaymentReturn:
+    name: displayPaymentReturn
+    title: 'Payment return'
+    description: ''
+displayPaymentTop:
+    name: displayPaymentTop
+    title: 'Top of payment page'
+    description: 'This hook is displayed at the top of the payment page'
+displayPersonalInformationTop:
+    name: displayPersonalInformationTop
+    title: 'Content in the checkout funnel, on top of the personal information panel'
+    description: 'Display actions or additional content in the personal details tab of the checkout funnel.'
+displayRightColumn:
+    name: displayRightColumn
+    title: 'Right column blocks'
+    description: 'This hook displays new elements in the right-hand column'
+displayShoppingCart:
+    name: displayShoppingCart
+    title: 'Shopping cart - Additional button'
+    description: 'This hook displays new action buttons within the shopping cart'
+displayShoppingCartFooter:
+    name: displayShoppingCartFooter
+    title: 'Shopping cart footer'
+    description: 'This hook displays some specific information on the shopping cart''s page'
+displayTop:
+    name: displayTop
+    title: 'Top of pages'
+    description: 'This hook displays additional elements at the top of your pages'
+displayTopColumn:
+    name: displayTopColumn
+    title: 'Top column blocks'
+    description: 'This hook displays new elements in the top of columns'
+displayWrapperBottom:
+    name: displayWrapperBottom
+    title: 'Main wrapper section (bottom)'
+    description: 'This hook displays new elements in the bottom of the main wrapper'
+displayWrapperTop:
+    name: displayWrapperTop
+    title: 'Main wrapper section (top)'
+    description: 'This hook displays new elements in the top of the main wrapper'
+filterHtmlContent:
+    name: filterHtmlContent
+    title: 'Filter HTML field before rending a page'
+    description: 'This hook is called just before fetching a page on HTML field'
+filterSupplierContent:
+    name: filterSupplierContent
+    title: 'Filter the content page supplier'
+    description: 'This hook is called just before fetching content page supplier'
+sendMailAlterTemplateVars:
+    name: sendMailAlterTemplateVars
+    title: 'Alter template vars on the fly'
+    description: 'This hook is called when Mail::send() is called'

@@ -1,0 +1,40 @@
+actionAfterCreateAttachmentFormHandler:
+    name: actionAfterCreateAttachmentFormHandler
+    title: 'Modify attachment identifiable object data after creating it'
+    description: 'This hook allows to modify attachment identifiable object forms data after it was created'
+actionAfterUpdateAttachmentFormHandler:
+    name: actionAfterUpdateAttachmentFormHandler
+    title: 'Modify attachment identifiable object data after updating it'
+    description: 'This hook allows to modify attachment identifiable object forms data after it was updated'
+actionAttachmentFormBuilderModifier:
+    name: actionAttachmentFormBuilderModifier
+    title: 'Modify attachment identifiable object form'
+    description: 'This hook allows to modify attachment identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionAttachmentGridDataModifier:
+    name: actionAttachmentGridDataModifier
+    title: 'Modify attachment grid data'
+    description: 'This hook allows to modify attachment grid data'
+actionAttachmentGridDefinitionModifier:
+    name: actionAttachmentGridDefinitionModifier
+    title: 'Modify attachment grid definition'
+    description: 'This hook allows to alter attachment grid columns, actions and filters'
+actionAttachmentGridFilterFormModifier:
+    name: actionAttachmentGridFilterFormModifier
+    title: 'Modify attachment grid filters'
+    description: 'This hook allows to modify filters for attachment grid'
+actionAttachmentGridPresenterModifier:
+    name: actionAttachmentGridPresenterModifier
+    title: 'Modify attachment grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for attachment grid'
+actionAttachmentGridQueryBuilderModifier:
+    name: actionAttachmentGridQueryBuilderModifier
+    title: 'Modify attachment grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for attachment grid'
+actionBeforeCreateAttachmentFormHandler:
+    name: actionBeforeCreateAttachmentFormHandler
+    title: 'Modify attachment identifiable object data before creating it'
+    description: 'This hook allows to modify attachment identifiable object forms data before it was created'
+actionBeforeUpdateAttachmentFormHandler:
+    name: actionBeforeUpdateAttachmentFormHandler
+    title: 'Modify attachment identifiable object data before updating it'
+    description: 'This hook allows to modify attachment identifiable object forms data before it was updated'

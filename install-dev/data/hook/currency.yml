@@ -1,0 +1,48 @@
+actionAfterCreateCurrencyFormHandler:
+    name: actionAfterCreateCurrencyFormHandler
+    title: 'Modify currency identifiable object data after creating it'
+    description: 'This hook allows to modify currency identifiable object forms data after it was created'
+actionAfterUpdateCurrencyFormHandler:
+    name: actionAfterUpdateCurrencyFormHandler
+    title: 'Modify currency identifiable object data after updating it'
+    description: 'This hook allows to modify currency identifiable object forms data after it was updated'
+actionBeforeCreateCurrencyFormHandler:
+    name: actionBeforeCreateCurrencyFormHandler
+    title: 'Modify currency identifiable object data before creating it'
+    description: 'This hook allows to modify currency identifiable object forms data before it was created'
+actionBeforeUpdateCurrencyFormHandler:
+    name: actionBeforeUpdateCurrencyFormHandler
+    title: 'Modify currency identifiable object data before updating it'
+    description: 'This hook allows to modify currency identifiable object forms data before it was updated'
+actionCurrencyForm:
+    name: actionCurrencyForm
+    title: 'Modify currency options form content'
+    description: 'This hook allows to modify currency options form FormBuilder'
+actionCurrencyFormBuilderModifier:
+    name: actionCurrencyFormBuilderModifier
+    title: 'Modify currency identifiable object form'
+    description: 'This hook allows to modify currency identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionCurrencyGridDataModifier:
+    name: actionCurrencyGridDataModifier
+    title: 'Modify currency grid data'
+    description: 'This hook allows to modify currency grid data'
+actionCurrencyGridDefinitionModifier:
+    name: actionCurrencyGridDefinitionModifier
+    title: 'Modify currency grid definition'
+    description: 'This hook allows to alter currency grid columns, actions and filters'
+actionCurrencyGridFilterFormModifier:
+    name: actionCurrencyGridFilterFormModifier
+    title: 'Modify currency grid filters'
+    description: 'This hook allows to modify filters for currency grid'
+actionCurrencyGridPresenterModifier:
+    name: actionCurrencyGridPresenterModifier
+    title: 'Modify currency grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for currency grid'
+actionCurrencyGridQueryBuilderModifier:
+    name: actionCurrencyGridQueryBuilderModifier
+    title: 'Modify currency grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for currency grid'
+actionCurrencySave:
+    name: actionCurrencySave
+    title: 'Modify currency options form saved data'
+    description: 'This hook allows to modify data of currency options form after it was saved'

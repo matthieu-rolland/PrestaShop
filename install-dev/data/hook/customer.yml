@@ -1,0 +1,100 @@
+actionAfterCreateCustomerFormHandler:
+    name: actionAfterCreateCustomerFormHandler
+    title: 'Modify customer identifiable object data after creating it'
+    description: 'This hook allows to modify customer identifiable object forms data after it was created'
+actionAfterUpdateCustomerFormHandler:
+    name: actionAfterUpdateCustomerFormHandler
+    title: 'Modify customer identifiable object data after updating it'
+    description: 'This hook allows to modify customer identifiable object forms data after it was updated'
+actionBeforeCreateCustomerFormHandler:
+    name: actionBeforeCreateCustomerFormHandler
+    title: 'Modify customer identifiable object data before creating it'
+    description: 'This hook allows to modify customer identifiable object forms data before it was created'
+actionBeforeUpdateCustomerFormHandler:
+    name: actionBeforeUpdateCustomerFormHandler
+    title: 'Modify customer identifiable object data before updating it'
+    description: 'This hook allows to modify customer identifiable object forms data before it was updated'
+actionCustomerAccountAdd:
+    name: actionCustomerAccountAdd
+    title: 'Successful customer account creation'
+    description: 'This hook is called when a new customer creates an account successfully'
+actionCustomerAccountUpdate:
+    name: actionCustomerAccountUpdate
+    title: 'Successful customer account update'
+    description: 'This hook is called when a customer updates its account successfully'
+actionCustomerFormBuilderModifier:
+    name: actionCustomerFormBuilderModifier
+    title: 'Modify customer identifiable object form'
+    description: 'This hook allows to modify customer identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionCustomerGridDataModifier:
+    name: actionCustomerGridDataModifier
+    title: 'Modify customer grid data'
+    description: 'This hook allows to modify customer grid data'
+actionCustomerGridDefinitionModifier:
+    name: actionCustomerGridDefinitionModifier
+    title: 'Modify customer grid definition'
+    description: 'This hook allows to alter customer grid columns, actions and filters'
+actionCustomerGridFilterFormModifier:
+    name: actionCustomerGridFilterFormModifier
+    title: 'Modify customer grid filters'
+    description: 'This hook allows to modify filters for customer grid'
+actionCustomerGridPresenterModifier:
+    name: actionCustomerGridPresenterModifier
+    title: 'Modify customer grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for customer grid'
+actionCustomerGridQueryBuilderModifier:
+    name: actionCustomerGridQueryBuilderModifier
+    title: 'Modify customer grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for customer grid'
+actionCustomerPreferencesPageForm:
+    name: actionCustomerPreferencesPageForm
+    title: 'Modify customer preferences page options form content'
+    description: 'This hook allows to modify customer preferences page options form FormBuilder'
+actionCustomerPreferencesPageSave:
+    name: actionCustomerPreferencesPageSave
+    title: 'Modify customer preferences page options form saved data'
+    description: 'This hook allows to modify data of customer preferences page options form after it was saved'
+actionValidateCustomerAddressForm:
+    name: actionValidateCustomerAddressForm
+    title: 'Customer address form validation'
+    description: 'This hook is called when a customer submit its address form'
+additionalCustomerAddressFields:
+    name: additionalCustomerAddressFields
+    title: 'Add fields to the Customer address form'
+    description: 'This hook returns an array of FormFields to add them to the customer address registration form'
+additionalCustomerFormFields:
+    name: additionalCustomerFormFields
+    title: 'Add fields to the Customer form'
+    description: 'This hook returns an array of FormFields to add them to the customer registration form'
+displayAdditionalCustomerAddressFields:
+    name: displayAdditionalCustomerAddressFields
+    title: 'Display additional customer address fields'
+    description: 'This hook allows to display extra field values added in an address form using hook ''additionalCustomerAddressFields'''
+displayAdminCustomers:
+    name: displayAdminCustomers
+    title: 'Display new elements in the Back Office, tab AdminCustomers'
+    description: 'This hook launches modules when the AdminCustomers tab is displayed in the Back Office'
+displayAdminCustomersAddressesItemAction:
+    name: displayAdminCustomersAddressesItemAction
+    title: 'Display new elements in the Back Office, tab AdminCustomers, Addresses actions'
+    description: 'This hook launches modules when the Addresses list into the AdminCustomers tab is displayed in the Back Office'
+displayCustomerAccount:
+    name: displayCustomerAccount
+    title: 'Customer account displayed in Front Office'
+    description: 'This hook displays new elements on the customer account page'
+displayCustomerAccountForm:
+    name: displayCustomerAccountForm
+    title: 'Customer account creation form'
+    description: 'This hook displays some information on the form to create a customer account'
+displayCustomerAccountFormTop:
+    name: displayCustomerAccountFormTop
+    title: 'Block above the form for create an account'
+    description: 'This hook is displayed above the customer''s account creation form'
+displayCustomerLoginFormAfter:
+    name: displayCustomerLoginFormAfter
+    title: 'Display elements after login form'
+    description: 'This hook displays new elements after the login form'
+validateCustomerFormFields:
+    name: validateCustomerFormFields
+    title: 'Customer registration form validation'
+    description: 'This hook is called to a module when it has sent additional fields with additionalCustomerFormFields'

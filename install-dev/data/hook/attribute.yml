@@ -1,0 +1,60 @@
+actionAttributeDelete:
+    name: actionAttributeDelete
+    title: 'Deleting an attributes features value'
+    description: 'This hook is called while deleting an attributes features value'
+actionAttributeGroupDelete:
+    name: actionAttributeGroupDelete
+    title: 'Deleting attribute group'
+    description: 'This hook is called while deleting an attributes  group'
+actionAttributeGroupGridDataModifier:
+    name: actionAttributeGroupGridDataModifier
+    title: 'Modify attribute group grid data'
+    description: 'This hook allows to modify attribute group grid data'
+actionAttributeGroupGridDefinitionModifier:
+    name: actionAttributeGroupGridDefinitionModifier
+    title: 'Modify attribute group grid definition'
+    description: 'This hook allows to alter attribute group grid columns, actions and filters'
+actionAttributeGroupGridFilterFormModifier:
+    name: actionAttributeGroupGridFilterFormModifier
+    title: 'Modify attribute group grid filters'
+    description: 'This hook allows to modify filters for attribute group grid'
+actionAttributeGroupGridPresenterModifier:
+    name: actionAttributeGroupGridPresenterModifier
+    title: 'Modify attribute group grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for attribute group grid'
+actionAttributeGroupGridQueryBuilderModifier:
+    name: actionAttributeGroupGridQueryBuilderModifier
+    title: 'Modify attribute group grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for attribute group grid'
+actionAttributeGroupSave:
+    name: actionAttributeGroupSave
+    title: 'Saving an attribute group'
+    description: 'This hook is called while saving an attributes group'
+actionAttributePostProcess:
+    name: actionAttributePostProcess
+    title: 'On post-process in admin feature value'
+    description: 'This hook is called on post-process in admin feature value'
+actionAttributeSave:
+    name: actionAttributeSave
+    title: 'Saving an attributes features value'
+    description: 'This hook is called while saving an attributes features value'
+actionProductAttributeDelete:
+    name: actionProductAttributeDelete
+    title: 'Product attribute deletion'
+    description: 'This hook is displayed when a product''s attribute is deleted'
+actionProductAttributeUpdate:
+    name: actionProductAttributeUpdate
+    title: 'Product attribute update'
+    description: 'This hook is displayed when a product''s attribute is updated'
+displayAttributeForm:
+    name: displayAttributeForm
+    title: 'Add fields to the form ''attribute value'''
+    description: 'This hook adds fields to the form ''attribute value'''
+displayAttributeGroupForm:
+    name: displayAttributeGroupForm
+    title: 'Add fields to the form ''attribute group'''
+    description: 'This hook adds fields to the form ''attribute group'''
+displayAttributeGroupPostProcess:
+    name: displayAttributeGroupPostProcess
+    title: 'On post-process in admin attribute group'
+    description: 'This hook is called on post-process in admin attribute group'

@@ -1,0 +1,44 @@
+actionEmailAddAfterContent:
+    name: actionEmailAddAfterContent
+    title: 'Add extra content after mail content'
+    description: 'This hook is called just after fetching mail template'
+actionEmailAddBeforeContent:
+    name: actionEmailAddBeforeContent
+    title: 'Add extra content before mail content'
+    description: 'This hook is called just before fetching mail template'
+actionEmailConfigurationForm:
+    name: actionEmailConfigurationForm
+    title: 'Modify email configuration options form content'
+    description: 'This hook allows to modify email configuration options form FormBuilder'
+actionEmailConfigurationSave:
+    name: actionEmailConfigurationSave
+    title: 'Modify email configuration options form saved data'
+    description: 'This hook allows to modify data of email configuration options form after it was saved'
+actionEmailLogsGridDataModifier:
+    name: actionEmailLogsGridDataModifier
+    title: 'Modify email logs grid data'
+    description: 'This hook allows to modify email logs grid data'
+actionEmailLogsGridDefinitionModifier:
+    name: actionEmailLogsGridDefinitionModifier
+    title: 'Modifying E-mail grid definition'
+    description: 'This hook allows to alter E-mail grid columns, actions and filters'
+actionEmailLogsGridFilterFormModifier:
+    name: actionEmailLogsGridFilterFormModifier
+    title: 'Modify filters form for E-mail grid'
+    description: 'This hook allows to alter filters form used in E-mail'
+actionEmailLogsGridPresenterModifier:
+    name: actionEmailLogsGridPresenterModifier
+    title: 'Modify E-mail grid view data'
+    description: 'This hook allows to alter presented E-mail grid data'
+actionEmailLogsGridQueryBuilderModifier:
+    name: actionEmailLogsGridQueryBuilderModifier
+    title: 'Modify E-mail grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for E-mail grid'
+actionEmailSendBefore:
+    name: actionEmailSendBefore
+    title: 'Before sending an email'
+    description: 'This hook is used to filter the content or the metadata of an email before sending it or even prevent its sending'
+displayCreateAccountEmailFormBottom:
+    name: displayCreateAccountEmailFormBottom
+    title: 'Customer authentication form'
+    description: 'This hook displays some information on the bottom of the email form'

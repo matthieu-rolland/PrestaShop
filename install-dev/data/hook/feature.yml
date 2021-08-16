@@ -1,0 +1,56 @@
+actionAdminAdvancedParametersPerformanceControllerPostProcessOptionalFeaturesBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessOptionalFeaturesBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Optional Features form'
+actionAfterCreateFeatureFormHandler:
+    name: actionAfterCreateFeatureFormHandler
+    title: 'Modify feature identifiable object data after creating it'
+    description: 'This hook allows to modify feature identifiable object forms data after it was created'
+actionAfterUpdateFeatureFormHandler:
+    name: actionAfterUpdateFeatureFormHandler
+    title: 'Modify feature identifiable object data after updating it'
+    description: 'This hook allows to modify feature identifiable object forms data after it was updated'
+actionBeforeCreateFeatureFormHandler:
+    name: actionBeforeCreateFeatureFormHandler
+    title: 'Modify feature identifiable object data before creating it'
+    description: 'This hook allows to modify feature identifiable object forms data before it was created'
+actionBeforeUpdateFeatureFormHandler:
+    name: actionBeforeUpdateFeatureFormHandler
+    title: 'Modify feature identifiable object data before updating it'
+    description: 'This hook allows to modify feature identifiable object forms data before it was updated'
+actionFeatureDelete:
+    name: actionFeatureDelete
+    title: 'Deleting attributes'' features'
+    description: 'This hook is called while deleting an attributes features'
+actionFeatureFormBuilderModifier:
+    name: actionFeatureFormBuilderModifier
+    title: 'Modify feature identifiable object form'
+    description: "This hook allows to modify feature identifiable object forms content by modifying form builder data\n      or FormBuilder itself"
+actionFeatureSave:
+    name: actionFeatureSave
+    title: 'Saving attributes'' features'
+    description: 'This hook is called while saving an attributes features'
+actionFeatureValueDelete:
+    name: actionFeatureValueDelete
+    title: 'Deleting attributes'' features'' values'
+    description: 'This hook is called while deleting an attributes features value'
+actionFeatureValueSave:
+    name: actionFeatureValueSave
+    title: 'Saving an attributes features value'
+    description: 'This hook is called while saving an attributes features value'
+displayFeatureForm:
+    name: displayFeatureForm
+    title: 'Add fields to the form ''feature'''
+    description: 'This hook adds fields to the form ''feature'''
+displayFeaturePostProcess:
+    name: displayFeaturePostProcess
+    title: 'On post-process in admin feature'
+    description: 'This hook is called on post-process in admin feature'
+displayFeatureValueForm:
+    name: displayFeatureValueForm
+    title: 'Add fields to the form ''feature value'''
+    description: 'This hook adds fields to the form ''feature value'''
+displayFeatureValuePostProcess:
+    name: displayFeatureValuePostProcess
+    title: 'On post-process in admin feature value'
+    description: 'This hook is called on post-process in admin feature value'

@@ -1,0 +1,176 @@
+actionAdminAdminPreferencesControllerPostProcessBefore:
+    name: actionAdminAdminPreferencesControllerPostProcessBefore
+    title: 'On post-process in Admin Preferences'
+    description: 'This hook is called on Admin Preferences post-process before processing the form'
+actionAdminAdminShopParametersMetaControllerPostProcessBefore:
+    name: actionAdminAdminShopParametersMetaControllerPostProcessBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing any form'
+actionAdminAdministrationControllerPostProcessBefore:
+    name: actionAdminAdministrationControllerPostProcessBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Administration Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Administration post-process before processing any form'
+actionAdminAdministrationControllerPostProcessGeneralBefore:
+    name: actionAdminAdministrationControllerPostProcessGeneralBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Administration Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Administration post-process before processing the General form'
+actionAdminAdministrationControllerPostProcessNotificationsBefore:
+    name: actionAdminAdministrationControllerPostProcessNotificationsBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Administration Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Administration post-process before processing the Notifications form'
+actionAdminAdministrationControllerPostProcessUploadQuotaBefore:
+    name: actionAdminAdministrationControllerPostProcessUploadQuotaBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Administration Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Administration post-process before processing the Upload Quota form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing any form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessCachingBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessCachingBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Caching form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessCombineCompressCacheBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessCombineCompressCacheBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Combine Compress Cache form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessDebugModeBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessDebugModeBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Debug Mode form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessMediaServersBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessMediaServersBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Media Servers form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessOptionalFeaturesBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessOptionalFeaturesBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Optional Features form'
+actionAdminAdvancedParametersPerformanceControllerPostProcessSmartyBefore:
+    name: actionAdminAdvancedParametersPerformanceControllerPostProcessSmartyBefore
+    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
+    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Smarty form'
+actionAdminControllerInitAfter:
+    name: actionAdminControllerInitAfter
+    title: 'Perform actions after admin controller initialization'
+    description: 'This hook is launched after the initialization of all admin controllers'
+actionAdminControllerInitBefore:
+    name: actionAdminControllerInitBefore
+    title: 'Perform actions before admin controller initialization'
+    description: 'This hook is launched before the initialization of all admin controllers'
+actionAdminInternationalGeolocationControllerPostProcessBefore:
+    name: actionAdminInternationalGeolocationControllerPostProcessBefore
+    title: 'On post-process in Admin Improve International Geolocation Controller'
+    description: 'This hook is called on Admin Improve International Geolocation post-process before processing any form'
+actionAdminInternationalGeolocationControllerPostProcessByIpAddressBefore:
+    name: actionAdminInternationalGeolocationControllerPostProcessByIpAddressBefore
+    title: 'On post-process in Admin Improve International Geolocation Controller'
+    description: 'This hook is called on Admin Improve International Geolocation post-process before processing the By Ip Address form'
+actionAdminInternationalGeolocationControllerPostProcessOptionsBefore:
+    name: actionAdminInternationalGeolocationControllerPostProcessOptionsBefore
+    title: 'On post-process in Admin Improve International Geolocation Controller'
+    description: 'This hook is called on Admin Improve International Geolocation post-process before processing the Options form'
+actionAdminInternationalGeolocationControllerPostProcessWhitelistBefore:
+    name: actionAdminInternationalGeolocationControllerPostProcessWhitelistBefore
+    title: 'On post-process in Admin Improve International Geolocation Controller'
+    description: 'This hook is called on Admin Improve International Geolocation post-process before processing the Whitelist form'
+actionAdminInternationalLocalizationControllerPostProcessAdvancedBefore:
+    name: actionAdminInternationalLocalizationControllerPostProcessAdvancedBefore
+    title: 'On post-process in Admin Improve International Localization Controller'
+    description: 'This hook is called on Admin Improve International Localization post-process before processing the Advanced form'
+actionAdminInternationalLocalizationControllerPostProcessBefore:
+    name: actionAdminInternationalLocalizationControllerPostProcessBefore
+    title: 'On post-process in Admin Improve International Localization Controller'
+    description: 'This hook is called on Admin Improve International Localization post-process before processing any form'
+actionAdminInternationalLocalizationControllerPostProcessConfigurationBefore:
+    name: actionAdminInternationalLocalizationControllerPostProcessConfigurationBefore
+    title: 'On post-process in Admin Improve International Localization Controller'
+    description: 'This hook is called on Admin Improve International Localization post-process before processing the Configuration form'
+actionAdminInternationalLocalizationControllerPostProcessLocalUnitsBefore:
+    name: actionAdminInternationalLocalizationControllerPostProcessLocalUnitsBefore
+    title: 'On post-process in Admin Improve International Localization Controller'
+    description: 'This hook is called on Admin Improve International Localization post-process before processing the Local Units form'
+actionAdminLoginControllerBefore:
+    name: actionAdminLoginControllerBefore
+    title: 'Perform actions before admin login controller initialization'
+    description: 'This hook is launched before the initialization of the login controller'
+actionAdminLoginControllerForgotAfter:
+    name: actionAdminLoginControllerForgotAfter
+    title: 'Perform actions after admin login controller forgot action initialization'
+    description: 'This hook is launched after the initialization of the forgot action in login controller'
+actionAdminLoginControllerForgotBefore:
+    name: actionAdminLoginControllerForgotBefore
+    title: 'Perform actions before admin login controller forgot action initialization'
+    description: 'This hook is launched before the initialization of the forgot action in login controller'
+actionAdminLoginControllerLoginAfter:
+    name: actionAdminLoginControllerLoginAfter
+    title: 'Perform actions after admin login controller login action initialization'
+    description: 'This hook is launched after the initialization of the login action in login controller'
+actionAdminLoginControllerLoginBefore:
+    name: actionAdminLoginControllerLoginBefore
+    title: 'Perform actions before admin login controller login action initialization'
+    description: 'This hook is launched before the initialization of the login action in login controller'
+actionAdminLoginControllerResetAfter:
+    name: actionAdminLoginControllerResetAfter
+    title: 'Perform actions after admin login controller reset action initialization'
+    description: 'This hook is launched after the initialization of the reset action in login controller'
+actionAdminLoginControllerResetBefore:
+    name: actionAdminLoginControllerResetBefore
+    title: 'Perform actions before admin login controller reset action initialization'
+    description: 'This hook is launched before the initialization of the reset action in login controller'
+actionAdminLoginControllerSetMedia:
+    name: actionAdminLoginControllerSetMedia
+    title: 'Set media on admin login page header'
+    description: 'This hook is called after adding media to admin login page header'
+actionAdminMetaSave:
+    name: actionAdminMetaSave
+    title: 'After saving the configuration in AdminMeta'
+    description: 'This hook is displayed after saving the configuration in AdminMeta'
+actionAdminShippingPreferencesControllerPostProcessBefore:
+    name: actionAdminShippingPreferencesControllerPostProcessBefore
+    title: 'On post-process in Admin Improve Shipping Preferences Controller'
+    description: 'This hook is called on Admin Improve Shipping Preferences post-process before processing any form'
+actionAdminShippingPreferencesControllerPostProcessCarrierOptionsBefore:
+    name: actionAdminShippingPreferencesControllerPostProcessCarrierOptionsBefore
+    title: 'On post-process in Admin Improve Shipping Preferences Controller'
+    description: 'This hook is called on Admin Improve Shipping Preferences post-process before processing the Carrier Options form'
+actionAdminShippingPreferencesControllerPostProcessHandlingBefore:
+    name: actionAdminShippingPreferencesControllerPostProcessHandlingBefore
+    title: 'On post-process in Admin Improve Shipping Preferences Controller'
+    description: 'This hook is called on Admin Improve Shipping Preferences post-process before processing the Handling form'
+actionAdminShopParametersMetaControllerPostProcessSeoOptionsBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessSeoOptionsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Seo Options form'
+actionAdminShopParametersMetaControllerPostProcessSetUpUrlsBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessSetUpUrlsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the SetUp Urls form'
+actionAdminShopParametersMetaControllerPostProcessShopUrlsBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessShopUrlsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Shop Urls form'
+actionAdminShopParametersMetaControllerPostProcessUrlSchemaBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessUrlSchemaBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Url Schema form'
+actionAdminShopParametersOrderPreferencesControllerPostProcessBefore:
+    name: actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
+    title: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing any form'
+actionAdminShopParametersOrderPreferencesControllerPostProcessGeneralBefore:
+    name: actionAdminShopParametersOrderPreferencesControllerPostProcessGeneralBefore
+    title: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing the General form'
+actionAdminShopParametersOrderPreferencesControllerPostProcessGiftOptionsBefore:
+    name: actionAdminShopParametersOrderPreferencesControllerPostProcessGiftOptionsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing the Gift Options form'
+actionAdministrationPageForm:
+    name: actionAdministrationPageForm
+    title: 'Manage Administration Page form fields'
+    description: 'This hook adds, update or remove fields of the Administration Page form'
+actionAdministrationPageSave:
+    name: actionAdministrationPageSave
+    title: 'Modify administration page options form saved data'
+    description: 'This hook allows to modify data of administration page options form after it was saved'

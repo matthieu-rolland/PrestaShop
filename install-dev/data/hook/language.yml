@@ -1,0 +1,40 @@
+actionAfterCreateLanguageFormHandler:
+    name: actionAfterCreateLanguageFormHandler
+    title: 'Modify language identifiable object data after creating it'
+    description: 'This hook allows to modify language identifiable object forms data after it was created'
+actionAfterUpdateLanguageFormHandler:
+    name: actionAfterUpdateLanguageFormHandler
+    title: 'Modify language identifiable object data after updating it'
+    description: 'This hook allows to modify language identifiable object forms data after it was updated'
+actionBeforeCreateLanguageFormHandler:
+    name: actionBeforeCreateLanguageFormHandler
+    title: 'Modify language identifiable object data before creating it'
+    description: 'This hook allows to modify language identifiable object forms data before it was created'
+actionBeforeUpdateLanguageFormHandler:
+    name: actionBeforeUpdateLanguageFormHandler
+    title: 'Modify language identifiable object data before updating it'
+    description: 'This hook allows to modify language identifiable object forms data before it was updated'
+actionLanguageFormBuilderModifier:
+    name: actionLanguageFormBuilderModifier
+    title: 'Modify language identifiable object form'
+    description: 'This hook allows to modify language identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionLanguageGridDataModifier:
+    name: actionLanguageGridDataModifier
+    title: 'Modify language grid data'
+    description: 'This hook allows to modify language grid data'
+actionLanguageGridDefinitionModifier:
+    name: actionLanguageGridDefinitionModifier
+    title: 'Modify language grid definition'
+    description: 'This hook allows to alter language grid columns, actions and filters'
+actionLanguageGridFilterFormModifier:
+    name: actionLanguageGridFilterFormModifier
+    title: 'Modify language grid filters'
+    description: 'This hook allows to modify filters for language grid'
+actionLanguageGridPresenterModifier:
+    name: actionLanguageGridPresenterModifier
+    title: 'Modify language grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for language grid'
+actionLanguageGridQueryBuilderModifier:
+    name: actionLanguageGridQueryBuilderModifier
+    title: 'Modify language grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for language grid'

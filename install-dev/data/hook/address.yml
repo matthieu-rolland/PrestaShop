@@ -1,0 +1,20 @@
+actionAddressGridDataModifier:
+    name: actionAddressGridDataModifier
+    title: 'Modify address grid data'
+    description: 'This hook allows to modify address grid data'
+actionAddressGridDefinitionModifier:
+    name: actionAddressGridDefinitionModifier
+    title: 'Modify address grid definition'
+    description: 'This hook allows to alter address grid columns, actions and filters'
+actionAddressGridFilterFormModifier:
+    name: actionAddressGridFilterFormModifier
+    title: 'Modify address grid filters'
+    description: 'This hook allows to modify filters for address grid'
+actionAddressGridPresenterModifier:
+    name: actionAddressGridPresenterModifier
+    title: 'Modify address grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for address grid'
+actionAddressGridQueryBuilderModifier:
+    name: actionAddressGridQueryBuilderModifier
+    title: 'Modify address grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for address grid'

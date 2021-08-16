@@ -1,0 +1,40 @@
+actionAfterCreateCatalogPriceRuleFormHandler:
+    name: actionAfterCreateCatalogPriceRuleFormHandler
+    title: 'Modify catalog price rule identifiable object data after creating it'
+    description: 'This hook allows to modify catalog price rule identifiable object forms data after it was created'
+actionAfterUpdateCatalogPriceRuleFormHandler:
+    name: actionAfterUpdateCatalogPriceRuleFormHandler
+    title: 'Modify catalog price rule identifiable object data after updating it'
+    description: 'This hook allows to modify catalog price rule identifiable object forms data after it was updated'
+actionBeforeCreateCatalogPriceRuleFormHandler:
+    name: actionBeforeCreateCatalogPriceRuleFormHandler
+    title: 'Modify catalog price rule identifiable object data before creating it'
+    description: 'This hook allows to modify catalog price rule identifiable object forms data before it was created'
+actionBeforeUpdateCatalogPriceRuleFormHandler:
+    name: actionBeforeUpdateCatalogPriceRuleFormHandler
+    title: 'Modify catalog price rule identifiable object data before updating it'
+    description: 'This hook allows to modify catalog price rule identifiable object forms data before it was updated'
+actionCatalogPriceRuleFormBuilderModifier:
+    name: actionCatalogPriceRuleFormBuilderModifier
+    title: 'Modify catalog price rule identifiable object form'
+    description: 'This hook allows to modify catalog price rule identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionCatalogPriceRuleGridDataModifier:
+    name: actionCatalogPriceRuleGridDataModifier
+    title: 'Modify catalog price rule grid data'
+    description: 'This hook allows to modify catalog price rule grid data'
+actionCatalogPriceRuleGridDefinitionModifier:
+    name: actionCatalogPriceRuleGridDefinitionModifier
+    title: 'Modify catalog price rule grid definition'
+    description: 'This hook allows to alter catalog price rule grid columns, actions and filters'
+actionCatalogPriceRuleGridFilterFormModifier:
+    name: actionCatalogPriceRuleGridFilterFormModifier
+    title: 'Modify catalog price rule grid filters'
+    description: 'This hook allows to modify filters for catalog price rule grid'
+actionCatalogPriceRuleGridPresenterModifier:
+    name: actionCatalogPriceRuleGridPresenterModifier
+    title: 'Modify catalog price rule grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for catalog price rule grid'
+actionCatalogPriceRuleGridQueryBuilderModifier:
+    name: actionCatalogPriceRuleGridQueryBuilderModifier
+    title: 'Modify catalog price rule grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for catalog price rule grid'

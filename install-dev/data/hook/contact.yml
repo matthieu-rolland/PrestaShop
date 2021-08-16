@@ -1,0 +1,40 @@
+actionAfterCreateContactFormHandler:
+    name: actionAfterCreateContactFormHandler
+    title: 'Modify contact identifiable object data after creating it'
+    description: 'This hook allows to modify contact identifiable object forms data after it was created'
+actionAfterUpdateContactFormHandler:
+    name: actionAfterUpdateContactFormHandler
+    title: 'Modify contact identifiable object data after updating it'
+    description: 'This hook allows to modify contact identifiable object forms data after it was updated'
+actionBeforeCreateContactFormHandler:
+    name: actionBeforeCreateContactFormHandler
+    title: 'Modify contact identifiable object data before creating it'
+    description: 'This hook allows to modify contact identifiable object forms data before it was created'
+actionBeforeUpdateContactFormHandler:
+    name: actionBeforeUpdateContactFormHandler
+    title: 'Modify contact identifiable object data before updating it'
+    description: 'This hook allows to modify contact identifiable object forms data before it was updated'
+actionContactFormBuilderModifier:
+    name: actionContactFormBuilderModifier
+    title: 'Modify contact identifiable object form'
+    description: 'This hook allows to modify contact identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionContactGridDataModifier:
+    name: actionContactGridDataModifier
+    title: 'Modify contact grid data'
+    description: 'This hook allows to modify contact grid data'
+actionContactGridDefinitionModifier:
+    name: actionContactGridDefinitionModifier
+    title: 'Modify contact grid definition'
+    description: 'This hook allows to alter contact grid columns, actions and filters'
+actionContactGridFilterFormModifier:
+    name: actionContactGridFilterFormModifier
+    title: 'Modify contact grid filters'
+    description: 'This hook allows to modify filters for contact grid'
+actionContactGridPresenterModifier:
+    name: actionContactGridPresenterModifier
+    title: 'Modify contact grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for contact grid'
+actionContactGridQueryBuilderModifier:
+    name: actionContactGridQueryBuilderModifier
+    title: 'Modify contact grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for contact grid'

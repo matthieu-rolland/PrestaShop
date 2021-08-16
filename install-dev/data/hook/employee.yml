@@ -1,0 +1,52 @@
+actionAfterCreateEmployeeFormHandler:
+    name: actionAfterCreateEmployeeFormHandler
+    title: 'Modify employee identifiable object data after creating it'
+    description: 'This hook allows to modify employee identifiable object forms data after it was created'
+actionAfterUpdateEmployeeFormHandler:
+    name: actionAfterUpdateEmployeeFormHandler
+    title: 'Modify employee identifiable object data after updating it'
+    description: 'This hook allows to modify employee identifiable object forms data after it was updated'
+actionBeforeCreateEmployeeFormHandler:
+    name: actionBeforeCreateEmployeeFormHandler
+    title: 'Modify employee identifiable object data before creating it'
+    description: 'This hook allows to modify employee identifiable object forms data before it was created'
+actionBeforeUpdateEmployeeFormHandler:
+    name: actionBeforeUpdateEmployeeFormHandler
+    title: 'Modify employee identifiable object data before updating it'
+    description: 'This hook allows to modify employee identifiable object forms data before it was updated'
+actionEmployeeForm:
+    name: actionEmployeeForm
+    title: 'Modify employee options form content'
+    description: 'This hook allows to modify employee options form FormBuilder'
+actionEmployeeFormBuilderModifier:
+    name: actionEmployeeFormBuilderModifier
+    title: 'Modify employee identifiable object form'
+    description: 'This hook allows to modify employee identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionEmployeeGridDataModifier:
+    name: actionEmployeeGridDataModifier
+    title: 'Modify employee grid data'
+    description: 'This hook allows to modify employee grid data'
+actionEmployeeGridDefinitionModifier:
+    name: actionEmployeeGridDefinitionModifier
+    title: 'Modify employee grid definition'
+    description: 'This hook allows to alter employee grid columns, actions and filters'
+actionEmployeeGridFilterFormModifier:
+    name: actionEmployeeGridFilterFormModifier
+    title: 'Modify employee grid filters'
+    description: 'This hook allows to modify filters for employee grid'
+actionEmployeeGridPresenterModifier:
+    name: actionEmployeeGridPresenterModifier
+    title: 'Modify employee grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for employee grid'
+actionEmployeeGridQueryBuilderModifier:
+    name: actionEmployeeGridQueryBuilderModifier
+    title: 'Modify employee grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for employee grid'
+actionEmployeeSave:
+    name: actionEmployeeSave
+    title: 'Modify employee options form saved data'
+    description: 'This hook allows to modify data of employee options form after it was saved'
+actionOverrideEmployeeImage:
+    name: actionOverrideEmployeeImage
+    title: 'Get Employee Image'
+    description: 'This hook is used to get the employee image'

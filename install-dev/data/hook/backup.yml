@@ -1,0 +1,28 @@
+actionBackupForm:
+    name: actionBackupForm
+    title: 'Modify backup options form content'
+    description: 'This hook allows to modify backup options form FormBuilder'
+actionBackupGridDataModifier:
+    name: actionBackupGridDataModifier
+    title: 'Modify backup grid data'
+    description: 'This hook allows to modify backup grid data'
+actionBackupGridDefinitionModifier:
+    name: actionBackupGridDefinitionModifier
+    title: 'Modifying DB Backup grid definition'
+    description: 'This hook allows to alter DB Backup grid columns, actions and filters'
+actionBackupGridFilterFormModifier:
+    name: actionBackupGridFilterFormModifier
+    title: 'Modify filters form for DB Backup grid'
+    description: 'This hook allows to alter filters form used in DB Backup'
+actionBackupGridPresenterModifier:
+    name: actionBackupGridPresenterModifier
+    title: 'Modify DB Backup grid view data'
+    description: 'This hook allows to alter presented DB Backup grid data'
+actionBackupGridQueryBuilderModifier:
+    name: actionBackupGridQueryBuilderModifier
+    title: 'Modify backup grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for backup grid'
+actionBackupSave:
+    name: actionBackupSave
+    title: 'Modify backup options form saved data'
+    description: 'This hook allows to modify data of backup options form after it was saved'

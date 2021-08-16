@@ -1,0 +1,220 @@
+actionAdminShopParametersOrderPreferencesControllerPostProcessBefore:
+    name: actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
+    title: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing any form'
+actionAdminShopParametersOrderPreferencesControllerPostProcessGeneralBefore:
+    name: actionAdminShopParametersOrderPreferencesControllerPostProcessGeneralBefore
+    title: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing the General form'
+actionAdminShopParametersOrderPreferencesControllerPostProcessGiftOptionsBefore:
+    name: actionAdminShopParametersOrderPreferencesControllerPostProcessGiftOptionsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing the Gift Options form'
+actionAfterCreateOrderMessageFormHandler:
+    name: actionAfterCreateOrderMessageFormHandler
+    title: 'Modify order message identifiable object data after creating it'
+    description: 'This hook allows to modify order message identifiable object forms data after it was created'
+actionAfterUpdateOrderMessageFormHandler:
+    name: actionAfterUpdateOrderMessageFormHandler
+    title: 'Modify order message identifiable object data after updating it'
+    description: 'This hook allows to modify order message identifiable object forms data after it was updated'
+actionBeforeCreateOrderMessageFormHandler:
+    name: actionBeforeCreateOrderMessageFormHandler
+    title: 'Modify order message identifiable object data before creating it'
+    description: 'This hook allows to modify order message identifiable object forms data before it was created'
+actionBeforeUpdateOrderMessageFormHandler:
+    name: actionBeforeUpdateOrderMessageFormHandler
+    title: 'Modify order message identifiable object data before updating it'
+    description: 'This hook allows to modify order message identifiable object forms data before it was updated'
+actionGetAdminOrderButtons:
+    name: actionGetAdminOrderButtons
+    title: 'Admin Order Buttons'
+    description: 'This hook is used to generate the buttons collection on the order view page (see ActionsBarButtonsCollection)'
+actionOrderDeliverySlipOptionsForm:
+    name: actionOrderDeliverySlipOptionsForm
+    title: 'Modify order delivery slip options options form content'
+    description: 'This hook allows to modify order delivery slip options options form FormBuilder'
+actionOrderDeliverySlipOptionsSave:
+    name: actionOrderDeliverySlipOptionsSave
+    title: 'Modify order delivery slip options options form saved data'
+    description: 'This hook allows to modify data of order delivery slip options options form after it was saved'
+actionOrderDeliverySlipPdfForm:
+    name: actionOrderDeliverySlipPdfForm
+    title: 'Modify order delivery slip pdf options form content'
+    description: 'This hook allows to modify order delivery slip pdf options form FormBuilder'
+actionOrderDeliverySlipPdfSave:
+    name: actionOrderDeliverySlipPdfSave
+    title: 'Modify order delivery slip pdf options form saved data'
+    description: 'This hook allows to modify data of order delivery slip pdf options form after it was saved'
+actionOrderEdited:
+    name: actionOrderEdited
+    title: 'Order edited'
+    description: 'This hook is called when an order is edited'
+actionOrderGridDataModifier:
+    name: actionOrderGridDataModifier
+    title: 'Modify order grid data'
+    description: 'This hook allows to modify order grid data'
+actionOrderGridDefinitionModifier:
+    name: actionOrderGridDefinitionModifier
+    title: 'Modify order grid definition'
+    description: 'This hook allows to alter order grid columns, actions and filters'
+actionOrderGridFilterFormModifier:
+    name: actionOrderGridFilterFormModifier
+    title: 'Modify order grid filters'
+    description: 'This hook allows to modify filters for order grid'
+actionOrderGridPresenterModifier:
+    name: actionOrderGridPresenterModifier
+    title: 'Modify order grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for order grid'
+actionOrderGridQueryBuilderModifier:
+    name: actionOrderGridQueryBuilderModifier
+    title: 'Modify order grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for order grid'
+actionOrderMessageFormBuilderModifier:
+    name: actionOrderMessageFormBuilderModifier
+    title: 'Modify order message identifiable object form'
+    description: 'This hook allows to modify order message identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionOrderMessageGridDataModifier:
+    name: actionOrderMessageGridDataModifier
+    title: 'Modify order message grid data'
+    description: 'This hook allows to modify order message grid data'
+actionOrderMessageGridDefinitionModifier:
+    name: actionOrderMessageGridDefinitionModifier
+    title: 'Modify order message grid definition'
+    description: 'This hook allows to alter order message grid columns, actions and filters'
+actionOrderMessageGridFilterFormModifier:
+    name: actionOrderMessageGridFilterFormModifier
+    title: 'Modify order message grid filters'
+    description: 'This hook allows to modify filters for order message grid'
+actionOrderMessageGridPresenterModifier:
+    name: actionOrderMessageGridPresenterModifier
+    title: 'Modify order message grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for order message grid'
+actionOrderMessageGridQueryBuilderModifier:
+    name: actionOrderMessageGridQueryBuilderModifier
+    title: 'Modify order message grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for order message grid'
+actionOrderPreferencesPageForm:
+    name: actionOrderPreferencesPageForm
+    title: 'Modify order preferences page options form content'
+    description: 'This hook allows to modify order preferences page options form FormBuilder'
+actionOrderPreferencesPageSave:
+    name: actionOrderPreferencesPageSave
+    title: 'Modify order preferences page options form saved data'
+    description: 'This hook allows to modify data of order preferences page options form after it was saved'
+actionOrderReturn:
+    name: actionOrderReturn
+    title: 'Returned product'
+    description: 'This hook is displayed when a customer returns a product '
+actionOrderSlipAdd:
+    name: actionOrderSlipAdd
+    title: 'Order slip creation'
+    description: 'This hook is called when a new credit slip is added regarding client order'
+actionOrderStatusPostUpdate:
+    name: actionOrderStatusPostUpdate
+    title: 'Post update of order status'
+    description: ''
+actionOrderStatusUpdate:
+    name: actionOrderStatusUpdate
+    title: 'Order status update - Event'
+    description: 'This hook launches modules when the status of an order changes'
+actionOrdersInvoicesByDateForm:
+    name: actionOrdersInvoicesByDateForm
+    title: 'Modify orders invoices by date options form content'
+    description: 'This hook allows to modify orders invoices by date options form FormBuilder'
+actionOrdersInvoicesByDateSave:
+    name: actionOrdersInvoicesByDateSave
+    title: 'Modify orders invoices by date options form saved data'
+    description: 'This hook allows to modify data of orders invoices by date options form after it was saved'
+actionOrdersInvoicesByStatusForm:
+    name: actionOrdersInvoicesByStatusForm
+    title: 'Modify orders invoices by status options form content'
+    description: 'This hook allows to modify orders invoices by status options form FormBuilder'
+actionOrdersInvoicesByStatusSave:
+    name: actionOrdersInvoicesByStatusSave
+    title: 'Modify orders invoices by status options form saved data'
+    description: 'This hook allows to modify data of orders invoices by status options form after it was saved'
+actionOrdersInvoicesOptionsForm:
+    name: actionOrdersInvoicesOptionsForm
+    title: 'Modify orders invoices options options form content'
+    description: 'This hook allows to modify orders invoices options options form FormBuilder'
+actionOrdersInvoicesOptionsSave:
+    name: actionOrdersInvoicesOptionsSave
+    title: 'Modify orders invoices options options form saved data'
+    description: 'This hook allows to modify data of orders invoices options options form after it was saved'
+actionPresentOrder:
+    name: actionPresentOrder
+    title: 'Order Presenter'
+    description: 'This hook is called before an order is presented'
+actionPresentOrderReturn:
+    name: actionPresentOrderReturn
+    title: 'Order Return Presenter'
+    description: 'This hook is called before an order return is presented'
+actionValidateOrder:
+    name: actionValidateOrder
+    title: 'New orders'
+    description: ''
+displayAdminOrder:
+    name: displayAdminOrder
+    title: 'Display new elements in the Back Office, tab AdminOrder'
+    description: 'This hook launches modules when the AdminOrder tab is displayed in the Back Office'
+displayAdminOrderBottom:
+    name: displayAdminOrderBottom
+    title: 'Admin Order Side Column Bottom'
+    description: 'This hook displays content in the order view page at the bottom of the side column'
+displayAdminOrderContentOrder:
+    name: displayAdminOrderContentOrder
+    title: 'Display new elements in Back Office, AdminOrder, panel Order'
+    description: 'This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel content'
+displayAdminOrderContentShip:
+    name: displayAdminOrderContentShip
+    title: 'Display new elements in Back Office, AdminOrder, panel Shipping'
+    description: 'This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel content'
+displayAdminOrderCreateExtraButtons:
+    name: displayAdminOrderCreateExtraButtons
+    title: 'Add buttons on the create order page dropdown'
+    description: 'Add buttons on the create order page dropdown'
+displayAdminOrderMain:
+    name: displayAdminOrderMain
+    title: 'Admin Order Main Column'
+    description: 'This hook displays content in the order view page in the main column under the details view'
+displayAdminOrderMainBottom:
+    name: displayAdminOrderMainBottom
+    title: 'Admin Order Main Column Bottom'
+    description: 'This hook displays content in the order view page at the bottom of the main column'
+displayAdminOrderSide:
+    name: displayAdminOrderSide
+    title: 'Admin Order Side Column'
+    description: 'This hook displays content in the order view page in the side column under the customer view'
+displayAdminOrderTabContent:
+    name: displayAdminOrderTabContent
+    title: 'Admin Order Tab Content'
+    description: 'This hook displays new tab contents on the order view page'
+displayAdminOrderTabLink:
+    name: displayAdminOrderTabLink
+    title: 'Admin Order Tab Link'
+    description: 'This hook displays new tab links on the order view page'
+displayAdminOrderTabOrder:
+    name: displayAdminOrderTabOrder
+    title: 'Display new elements in Back Office, AdminOrder, panel Order'
+    description: 'This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel tabs'
+displayAdminOrderTabShip:
+    name: displayAdminOrderTabShip
+    title: 'Display new elements in Back Office, AdminOrder, panel Shipping'
+    description: 'This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel tabs'
+displayAdminOrderTop:
+    name: displayAdminOrderTop
+    title: 'Admin Order Top'
+    description: 'This hook displays content at the top of the order view page'
+displayBackOfficeOrderActions:
+    name: displayBackOfficeOrderActions
+    title: 'Admin Order Actions'
+    description: 'This hook displays content in the order view page after action buttons (or aliased to side column in migrated page)'
+displayOrderConfirmation:
+    name: displayOrderConfirmation
+    title: 'Order confirmation page'
+    description: 'This hook is called within an order''s confirmation page'
+displayOrderDetail:
+    name: displayOrderDetail
+    title: 'Order detail'
+    description: 'This hook is displayed within the order''s details in Front Office'

@@ -1,0 +1,72 @@
+actionAfterCreateTaxFormHandler:
+    name: actionAfterCreateTaxFormHandler
+    title: 'Modify tax identifiable object data after creating it'
+    description: 'This hook allows to modify tax identifiable object forms data after it was created'
+actionAfterUpdateTaxFormHandler:
+    name: actionAfterUpdateTaxFormHandler
+    title: 'Modify tax identifiable object data after updating it'
+    description: 'This hook allows to modify tax identifiable object forms data after it was updated'
+actionBeforeCreateTaxFormHandler:
+    name: actionBeforeCreateTaxFormHandler
+    title: 'Modify tax identifiable object data before creating it'
+    description: 'This hook allows to modify tax identifiable object forms data before it was created'
+actionBeforeUpdateTaxFormHandler:
+    name: actionBeforeUpdateTaxFormHandler
+    title: 'Modify tax identifiable object data before updating it'
+    description: 'This hook allows to modify tax identifiable object forms data before it was updated'
+actionTaxForm:
+    name: actionTaxForm
+    title: 'Modify tax options form content'
+    description: 'This hook allows to modify tax options form FormBuilder'
+actionTaxFormBuilderModifier:
+    name: actionTaxFormBuilderModifier
+    title: 'Modify tax identifiable object form'
+    description: 'This hook allows to modify tax identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionTaxGridDataModifier:
+    name: actionTaxGridDataModifier
+    title: 'Modify tax grid data'
+    description: 'This hook allows to modify tax grid data'
+actionTaxGridDefinitionModifier:
+    name: actionTaxGridDefinitionModifier
+    title: 'Modify tax grid definition'
+    description: 'This hook allows to alter tax grid columns, actions and filters'
+actionTaxGridFilterFormModifier:
+    name: actionTaxGridFilterFormModifier
+    title: 'Modify tax grid filters'
+    description: 'This hook allows to modify filters for tax grid'
+actionTaxGridPresenterModifier:
+    name: actionTaxGridPresenterModifier
+    title: 'Modify tax grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for tax grid'
+actionTaxGridQueryBuilderModifier:
+    name: actionTaxGridQueryBuilderModifier
+    title: 'Modify tax grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for tax grid'
+actionTaxManager:
+    name: actionTaxManager
+    title: 'Tax Manager Factory'
+    description: ''
+actionTaxRulesGroupGridDataModifier:
+    name: actionTaxRulesGroupGridDataModifier
+    title: 'Modify tax rules group grid data'
+    description: 'This hook allows to modify tax rules group grid data'
+actionTaxRulesGroupGridDefinitionModifier:
+    name: actionTaxRulesGroupGridDefinitionModifier
+    title: 'Modify tax rules group grid definition'
+    description: 'This hook allows to alter tax rules group grid columns, actions and filters'
+actionTaxRulesGroupGridFilterFormModifier:
+    name: actionTaxRulesGroupGridFilterFormModifier
+    title: 'Modify tax rules group grid filters'
+    description: 'This hook allows to modify filters for tax rules group grid'
+actionTaxRulesGroupGridPresenterModifier:
+    name: actionTaxRulesGroupGridPresenterModifier
+    title: 'Modify tax rules group grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for tax rules group grid'
+actionTaxRulesGroupGridQueryBuilderModifier:
+    name: actionTaxRulesGroupGridQueryBuilderModifier
+    title: 'Modify tax rules group grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for tax rules group grid'
+actionTaxSave:
+    name: actionTaxSave
+    title: 'Modify tax options form saved data'
+    description: 'This hook allows to modify data of tax options form after it was saved'

@@ -1,0 +1,72 @@
+actionAdminAdminShopParametersMetaControllerPostProcessBefore:
+    name: actionAdminAdminShopParametersMetaControllerPostProcessBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing any form'
+actionAdminMetaSave:
+    name: actionAdminMetaSave
+    title: 'After saving the configuration in AdminMeta'
+    description: 'This hook is displayed after saving the configuration in AdminMeta'
+actionAdminShopParametersMetaControllerPostProcessSeoOptionsBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessSeoOptionsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Seo Options form'
+actionAdminShopParametersMetaControllerPostProcessSetUpUrlsBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessSetUpUrlsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the SetUp Urls form'
+actionAdminShopParametersMetaControllerPostProcessShopUrlsBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessShopUrlsBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Shop Urls form'
+actionAdminShopParametersMetaControllerPostProcessUrlSchemaBefore:
+    name: actionAdminShopParametersMetaControllerPostProcessUrlSchemaBefore
+    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
+    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Url Schema form'
+actionAfterCreateMetaFormHandler:
+    name: actionAfterCreateMetaFormHandler
+    title: 'Modify meta identifiable object data after creating it'
+    description: 'This hook allows to modify meta identifiable object forms data after it was created'
+actionAfterUpdateMetaFormHandler:
+    name: actionAfterUpdateMetaFormHandler
+    title: 'Modify meta identifiable object data after updating it'
+    description: 'This hook allows to modify meta identifiable object forms data after it was updated'
+actionBeforeCreateMetaFormHandler:
+    name: actionBeforeCreateMetaFormHandler
+    title: 'Modify meta identifiable object data before creating it'
+    description: 'This hook allows to modify meta identifiable object forms data before it was created'
+actionBeforeUpdateMetaFormHandler:
+    name: actionBeforeUpdateMetaFormHandler
+    title: 'Modify meta identifiable object data before updating it'
+    description: 'This hook allows to modify meta identifiable object forms data before it was updated'
+actionMetaFormBuilderModifier:
+    name: actionMetaFormBuilderModifier
+    title: 'Modify meta identifiable object form'
+    description: 'This hook allows to modify meta identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionMetaGridDataModifier:
+    name: actionMetaGridDataModifier
+    title: 'Modify meta grid data'
+    description: 'This hook allows to modify meta grid data'
+actionMetaGridDefinitionModifier:
+    name: actionMetaGridDefinitionModifier
+    title: 'Modifying SEO and URLs grid definition'
+    description: 'This hook allows to alter SEO and URLs grid columns, actions and filters'
+actionMetaGridFilterFormModifier:
+    name: actionMetaGridFilterFormModifier
+    title: 'Modify filters form for SEO and URLs grid'
+    description: 'This hook allows to alter filters form used in SEO and URLs'
+actionMetaGridPresenterModifier:
+    name: actionMetaGridPresenterModifier
+    title: 'Modify SEO and URLs grid view data'
+    description: 'This hook allows to alter presented SEO and URLs grid data'
+actionMetaGridQueryBuilderModifier:
+    name: actionMetaGridQueryBuilderModifier
+    title: 'Modify SEO and URLs grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for SEO and URLs grid'
+actionMetaPageForm:
+    name: actionMetaPageForm
+    title: 'Modify meta page options form content'
+    description: 'This hook allows to modify meta page options form FormBuilder'
+actionMetaPageSave:
+    name: actionMetaPageSave
+    title: 'Modify meta page options form saved data'
+    description: 'This hook allows to modify data of meta page options form after it was saved'

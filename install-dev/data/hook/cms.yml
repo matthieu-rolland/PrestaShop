@@ -1,0 +1,88 @@
+actionAfterCreateCmsPageCategoryFormHandler:
+    name: actionAfterCreateCmsPageCategoryFormHandler
+    title: 'Modify cms page category identifiable object data after creating it'
+    description: 'This hook allows to modify cms page category identifiable object forms data after it was created'
+actionAfterCreateCmsPageFormHandler:
+    name: actionAfterCreateCmsPageFormHandler
+    title: 'Modify cms page identifiable object data after creating it'
+    description: 'This hook allows to modify cms page identifiable object forms data after it was created'
+actionAfterUpdateCmsPageCategoryFormHandler:
+    name: actionAfterUpdateCmsPageCategoryFormHandler
+    title: 'Modify cms page category identifiable object data after updating it'
+    description: 'This hook allows to modify cms page category identifiable object forms data after it was updated'
+actionAfterUpdateCmsPageFormHandler:
+    name: actionAfterUpdateCmsPageFormHandler
+    title: 'Modify cms page identifiable object data after updating it'
+    description: 'This hook allows to modify cms page identifiable object forms data after it was updated'
+actionBeforeCreateCmsPageCategoryFormHandler:
+    name: actionBeforeCreateCmsPageCategoryFormHandler
+    title: 'Modify cms page category identifiable object data before creating it'
+    description: 'This hook allows to modify cms page category identifiable object forms data before it was created'
+actionBeforeCreateCmsPageFormHandler:
+    name: actionBeforeCreateCmsPageFormHandler
+    title: 'Modify cms page identifiable object data before creating it'
+    description: 'This hook allows to modify cms page identifiable object forms data before it was created'
+actionBeforeUpdateCmsPageCategoryFormHandler:
+    name: actionBeforeUpdateCmsPageCategoryFormHandler
+    title: 'Modify cms page category identifiable object data before updating it'
+    description: 'This hook allows to modify cms page category identifiable object forms data before it was updated'
+actionBeforeUpdateCmsPageFormHandler:
+    name: actionBeforeUpdateCmsPageFormHandler
+    title: 'Modify cms page identifiable object data before updating it'
+    description: 'This hook allows to modify cms page identifiable object forms data before it was updated'
+actionCmsPageCategoryFormBuilderModifier:
+    name: actionCmsPageCategoryFormBuilderModifier
+    title: 'Modify cms page category identifiable object form'
+    description: 'This hook allows to modify cms page category identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionCmsPageCategoryGridDataModifier:
+    name: actionCmsPageCategoryGridDataModifier
+    title: 'Modify cms page category grid data'
+    description: 'This hook allows to modify cms page category grid data'
+actionCmsPageCategoryGridDefinitionModifier:
+    name: actionCmsPageCategoryGridDefinitionModifier
+    title: 'Modify cms page category grid definition'
+    description: 'This hook allows to alter cms page category grid columns, actions and filters'
+actionCmsPageCategoryGridFilterFormModifier:
+    name: actionCmsPageCategoryGridFilterFormModifier
+    title: 'Modify cms page category grid filters'
+    description: 'This hook allows to modify filters for cms page category grid'
+actionCmsPageCategoryGridPresenterModifier:
+    name: actionCmsPageCategoryGridPresenterModifier
+    title: 'Modify cms page category grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for cms page category grid'
+actionCmsPageCategoryGridQueryBuilderModifier:
+    name: actionCmsPageCategoryGridQueryBuilderModifier
+    title: 'Modify cms page category grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for cms page category grid'
+actionCmsPageFormBuilderModifier:
+    name: actionCmsPageFormBuilderModifier
+    title: 'Modify cms page identifiable object form'
+    description: 'This hook allows to modify cms page identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionCmsPageGridDataModifier:
+    name: actionCmsPageGridDataModifier
+    title: 'Modify cms page grid data'
+    description: 'This hook allows to modify cms page grid data'
+actionCmsPageGridDefinitionModifier:
+    name: actionCmsPageGridDefinitionModifier
+    title: 'Modify cms page grid definition'
+    description: 'This hook allows to alter cms page grid columns, actions and filters'
+actionCmsPageGridFilterFormModifier:
+    name: actionCmsPageGridFilterFormModifier
+    title: 'Modify cms page grid filters'
+    description: 'This hook allows to modify filters for cms page grid'
+actionCmsPageGridPresenterModifier:
+    name: actionCmsPageGridPresenterModifier
+    title: 'Modify cms page grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for cms page grid'
+actionCmsPageGridQueryBuilderModifier:
+    name: actionCmsPageGridQueryBuilderModifier
+    title: 'Modify cms page grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for cms page grid'
+filterCmsCategoryContent:
+    name: filterCmsCategoryContent
+    title: 'Filter the content page category'
+    description: 'This hook is called just before fetching content page category'
+filterCmsContent:
+    name: filterCmsContent
+    title: 'Filter the content page'
+    description: 'This hook is called just before fetching content page'

@@ -1,0 +1,52 @@
+actionAfterCreateWebserviceKeyFormHandler:
+    name: actionAfterCreateWebserviceKeyFormHandler
+    title: 'Modify webservice key identifiable object data after creating it'
+    description: 'This hook allows to modify webservice key identifiable object forms data after it was created'
+actionAfterUpdateWebserviceKeyFormHandler:
+    name: actionAfterUpdateWebserviceKeyFormHandler
+    title: 'Modify webservice key identifiable object data after updating it'
+    description: 'This hook allows to modify webservice key identifiable object forms data after it was updated'
+actionBeforeCreateWebserviceKeyFormHandler:
+    name: actionBeforeCreateWebserviceKeyFormHandler
+    title: 'Modify webservice key identifiable object data before creating it'
+    description: 'This hook allows to modify webservice key identifiable object forms data before it was created'
+actionBeforeUpdateWebserviceKeyFormHandler:
+    name: actionBeforeUpdateWebserviceKeyFormHandler
+    title: 'Modify webservice key identifiable object data before updating it'
+    description: 'This hook allows to modify webservice key identifiable object forms data before it was updated'
+actionWebserviceKeyFormBuilderModifier:
+    name: actionWebserviceKeyFormBuilderModifier
+    title: 'Modify webservice key identifiable object form'
+    description: 'This hook allows to modify webservice key identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionWebserviceKeyGridDataModifier:
+    name: actionWebserviceKeyGridDataModifier
+    title: 'Modify webservice key grid data'
+    description: 'This hook allows to modify webservice key grid data'
+actionWebserviceKeyGridDefinitionModifier:
+    name: actionWebserviceKeyGridDefinitionModifier
+    title: 'Modifying Webservice grid definition'
+    description: 'This hook allows to alter Webservice grid columns, actions and filters'
+actionWebserviceKeyGridFilterFormModifier:
+    name: actionWebserviceKeyGridFilterFormModifier
+    title: 'Modify filters form for Webservice grid'
+    description: 'This hook allows to alter filters form used in Webservice'
+actionWebserviceKeyGridPresenterModifier:
+    name: actionWebserviceKeyGridPresenterModifier
+    title: 'Modify Webservice grid view data'
+    description: 'This hook allows to alter presented Webservice grid data'
+actionWebserviceKeyGridQueryBuilderModifier:
+    name: actionWebserviceKeyGridQueryBuilderModifier
+    title: 'Modify Webservice grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for Webservice grid'
+actionWebservicePageForm:
+    name: actionWebservicePageForm
+    title: 'Modify webservice page options form content'
+    description: 'This hook allows to modify webservice page options form FormBuilder'
+actionWebservicePageSave:
+    name: actionWebservicePageSave
+    title: 'Modify webservice page options form saved data'
+    description: 'This hook allows to modify data of webservice page options form after it was saved'
+addWebserviceResources:
+    name: addWebserviceResources
+    title: 'Add extra webservice resource'
+    description: 'This hook is called when webservice resources list in webservice controller'

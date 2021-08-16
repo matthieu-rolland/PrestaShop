@@ -1,0 +1,84 @@
+actionAfterCreateManufacturerAddressFormHandler:
+    name: actionAfterCreateManufacturerAddressFormHandler
+    title: 'Modify manufacturer address identifiable object data after creating it'
+    description: 'This hook allows to modify manufacturer address identifiable object forms data after it was created'
+actionAfterCreateManufacturerFormHandler:
+    name: actionAfterCreateManufacturerFormHandler
+    title: 'Modify manufacturer identifiable object data after creating it'
+    description: 'This hook allows to modify manufacturer identifiable object forms data after it was created'
+actionAfterUpdateManufacturerAddressFormHandler:
+    name: actionAfterUpdateManufacturerAddressFormHandler
+    title: 'Modify manufacturer address identifiable object data after updating it'
+    description: 'This hook allows to modify manufacturer address identifiable object forms data after it was updated'
+actionAfterUpdateManufacturerFormHandler:
+    name: actionAfterUpdateManufacturerFormHandler
+    title: 'Modify manufacturer identifiable object data after updating it'
+    description: 'This hook allows to modify manufacturer identifiable object forms data after it was updated'
+actionBeforeCreateManufacturerAddressFormHandler:
+    name: actionBeforeCreateManufacturerAddressFormHandler
+    title: 'Modify manufacturer address identifiable object data before creating it'
+    description: 'This hook allows to modify manufacturer address identifiable object forms data before it was created'
+actionBeforeCreateManufacturerFormHandler:
+    name: actionBeforeCreateManufacturerFormHandler
+    title: 'Modify manufacturer identifiable object data before creating it'
+    description: 'This hook allows to modify manufacturer identifiable object forms data before it was created'
+actionBeforeUpdateManufacturerAddressFormHandler:
+    name: actionBeforeUpdateManufacturerAddressFormHandler
+    title: 'Modify manufacturer address identifiable object data before updating it'
+    description: 'This hook allows to modify manufacturer address identifiable object forms data before it was updated'
+actionBeforeUpdateManufacturerFormHandler:
+    name: actionBeforeUpdateManufacturerFormHandler
+    title: 'Modify manufacturer identifiable object data before updating it'
+    description: 'This hook allows to modify manufacturer identifiable object forms data before it was updated'
+actionManufacturerAddressFormBuilderModifier:
+    name: actionManufacturerAddressFormBuilderModifier
+    title: 'Modify manufacturer address identifiable object form'
+    description: 'This hook allows to modify manufacturer address identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionManufacturerAddressGridDataModifier:
+    name: actionManufacturerAddressGridDataModifier
+    title: 'Modify manufacturer address grid data'
+    description: 'This hook allows to modify manufacturer address grid data'
+actionManufacturerAddressGridDefinitionModifier:
+    name: actionManufacturerAddressGridDefinitionModifier
+    title: 'Modify manufacturer address grid definition'
+    description: 'This hook allows to alter manufacturer address grid columns, actions and filters'
+actionManufacturerAddressGridFilterFormModifier:
+    name: actionManufacturerAddressGridFilterFormModifier
+    title: 'Modify manufacturer address grid filters'
+    description: 'This hook allows to modify filters for manufacturer address grid'
+actionManufacturerAddressGridPresenterModifier:
+    name: actionManufacturerAddressGridPresenterModifier
+    title: 'Modify manufacturer address grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for manufacturer address grid'
+actionManufacturerAddressGridQueryBuilderModifier:
+    name: actionManufacturerAddressGridQueryBuilderModifier
+    title: 'Modify manufacturer address grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for manufacturer address grid'
+actionManufacturerFormBuilderModifier:
+    name: actionManufacturerFormBuilderModifier
+    title: 'Modify manufacturer identifiable object form'
+    description: 'This hook allows to modify manufacturer identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionManufacturerGridDataModifier:
+    name: actionManufacturerGridDataModifier
+    title: 'Modify manufacturer grid data'
+    description: 'This hook allows to modify manufacturer grid data'
+actionManufacturerGridDefinitionModifier:
+    name: actionManufacturerGridDefinitionModifier
+    title: 'Modify manufacturer grid definition'
+    description: 'This hook allows to alter manufacturer grid columns, actions and filters'
+actionManufacturerGridFilterFormModifier:
+    name: actionManufacturerGridFilterFormModifier
+    title: 'Modify manufacturer grid filters'
+    description: 'This hook allows to modify filters for manufacturer grid'
+actionManufacturerGridPresenterModifier:
+    name: actionManufacturerGridPresenterModifier
+    title: 'Modify manufacturer grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for manufacturer grid'
+actionManufacturerGridQueryBuilderModifier:
+    name: actionManufacturerGridQueryBuilderModifier
+    title: 'Modify manufacturer grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for manufacturer grid'
+filterManufacturerContent:
+    name: filterManufacturerContent
+    title: 'Filter the content page manufacturer'
+    description: 'This hook is called just before fetching content page manufacturer'

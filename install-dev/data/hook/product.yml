@@ -1,0 +1,288 @@
+actionDisabledProductGridDataModifier:
+    name: actionDisabledProductGridDataModifier
+    title: 'Modify disabled product grid data'
+    description: 'This hook allows to modify disabled product grid data'
+actionDisabledProductGridDefinitionModifier:
+    name: actionDisabledProductGridDefinitionModifier
+    title: 'Modify disabled product grid definition'
+    description: 'This hook allows to alter disabled product grid columns, actions and filters'
+actionDisabledProductGridFilterFormModifier:
+    name: actionDisabledProductGridFilterFormModifier
+    title: 'Modify disabled product grid filters'
+    description: 'This hook allows to modify filters for disabled product grid'
+actionDisabledProductGridPresenterModifier:
+    name: actionDisabledProductGridPresenterModifier
+    title: 'Modify disabled product grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for disabled product grid'
+actionDisabledProductGridQueryBuilderModifier:
+    name: actionDisabledProductGridQueryBuilderModifier
+    title: 'Modify disabled product grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for disabled product grid'
+actionGetProductPropertiesAfterUnitPrice:
+    name: actionGetProductPropertiesAfterUnitPrice
+    title: 'Product Properties'
+    description: 'This hook is called after defining the properties of a product'
+actionNoQtyProductWithCombinationGridDataModifier:
+    name: actionNoQtyProductWithCombinationGridDataModifier
+    title: 'Modify no qty product with combination grid data'
+    description: 'This hook allows to modify no qty product with combination grid data'
+actionNoQtyProductWithCombinationGridDefinitionModifier:
+    name: actionNoQtyProductWithCombinationGridDefinitionModifier
+    title: 'Modify no qty product with combination grid definition'
+    description: "This hook allows to alter no qty product with combination grid columns, actions and filters\n      "
+actionNoQtyProductWithCombinationGridFilterFormModifier:
+    name: actionNoQtyProductWithCombinationGridFilterFormModifier
+    title: 'Modify no qty product with combination grid filters'
+    description: 'This hook allows to modify filters for no qty product with combination grid'
+actionNoQtyProductWithCombinationGridPresenterModifier:
+    name: actionNoQtyProductWithCombinationGridPresenterModifier
+    title: 'Modify no qty product with combination grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for no qty product with combination grid'
+actionNoQtyProductWithCombinationGridQueryBuilderModifier:
+    name: actionNoQtyProductWithCombinationGridQueryBuilderModifier
+    title: 'Modify no qty product with combination grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for no qty product with combination grid'
+actionNoQtyProductWithoutCombinationGridDataModifier:
+    name: actionNoQtyProductWithoutCombinationGridDataModifier
+    title: 'Modify no qty product without combination grid data'
+    description: 'This hook allows to modify no qty product without combination grid data'
+actionNoQtyProductWithoutCombinationGridDefinitionModifier:
+    name: actionNoQtyProductWithoutCombinationGridDefinitionModifier
+    title: 'Modify no qty product without combination grid definition'
+    description: "This hook allows to alter no qty product without combination grid columns, actions and filters\n      "
+actionNoQtyProductWithoutCombinationGridFilterFormModifier:
+    name: actionNoQtyProductWithoutCombinationGridFilterFormModifier
+    title: 'Modify no qty product without combination grid filters'
+    description: 'This hook allows to modify filters for no qty product without combination grid'
+actionNoQtyProductWithoutCombinationGridPresenterModifier:
+    name: actionNoQtyProductWithoutCombinationGridPresenterModifier
+    title: 'Modify no qty product without combination grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for no qty product without combination grid'
+actionNoQtyProductWithoutCombinationGridQueryBuilderModifier:
+    name: actionNoQtyProductWithoutCombinationGridQueryBuilderModifier
+    title: 'Modify no qty product without combination grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for no qty product without combination grid'
+actionObjectProductInCartDeleteAfter:
+    name: actionObjectProductInCartDeleteAfter
+    title: 'Cart product removal'
+    description: 'This hook is called after a product is removed from a cart'
+actionObjectProductInCartDeleteBefore:
+    name: actionObjectProductInCartDeleteBefore
+    title: 'Cart product removal'
+    description: 'This hook is called before a product is removed from a cart'
+actionPresentProduct:
+    name: actionPresentProduct
+    title: 'Product Presenter'
+    description: 'This hook is called before a product is presented'
+actionPresentProductListing:
+    name: actionPresentProductListing
+    title: 'Product Listing Presenter'
+    description: 'This hook is called before a product listing is presented'
+actionProductAdd:
+    name: actionProductAdd
+    title: 'Product creation'
+    description: 'This hook is displayed after a product is created'
+actionProductAttributeDelete:
+    name: actionProductAttributeDelete
+    title: 'Product attribute deletion'
+    description: 'This hook is displayed when a product''s attribute is deleted'
+actionProductAttributeUpdate:
+    name: actionProductAttributeUpdate
+    title: 'Product attribute update'
+    description: 'This hook is displayed when a product''s attribute is updated'
+actionProductCancel:
+    name: actionProductCancel
+    title: 'Product cancelled'
+    description: 'This hook is called when you cancel a product in an order'
+actionProductDelete:
+    name: actionProductDelete
+    title: 'Product deletion'
+    description: 'This hook is called when a product is deleted'
+actionProductFlagsModifier:
+    name: actionProductFlagsModifier
+    title: 'Customize product labels displayed on the product list on FO'
+    description: 'This hook allows to add and remove product labels displayed on top of product images'
+actionProductOutOfStock:
+    name: actionProductOutOfStock
+    title: 'Out-of-stock product'
+    description: 'This hook displays new action buttons if a product is out of stock'
+actionProductPreferencesPageForm:
+    name: actionProductPreferencesPageForm
+    title: 'Modify product preferences page options form content'
+    description: 'This hook allows to modify product preferences page options form FormBuilder'
+actionProductPreferencesPageSave:
+    name: actionProductPreferencesPageSave
+    title: 'Modify product preferences page options form saved data'
+    description: 'This hook allows to modify data of product preferences page options form after it was saved'
+actionProductSave:
+    name: actionProductSave
+    title: 'Saving products'
+    description: 'This hook is called while saving products'
+actionProductSearchAfter:
+    name: actionProductSearchAfter
+    title: 'Event triggered after search product completed'
+    description: 'This hook is called after the product search. Parameters are already filter'
+actionProductSearchProviderRunQueryAfter:
+    name: actionProductSearchProviderRunQueryAfter
+    title: 'Runs an action after ProductSearchProviderInterface::RunQuery()'
+    description: 'Required to return a previous state of an SQL query or/and to change a result of the SQL query after executing it'
+actionProductSearchProviderRunQueryBefore:
+    name: actionProductSearchProviderRunQueryBefore
+    title: 'Runs an action before ProductSearchProviderInterface::RunQuery()'
+    description: 'Required to modify an SQL query before executing it'
+actionProductUpdate:
+    name: actionProductUpdate
+    title: 'Product update'
+    description: 'This hook is displayed after a product has been updated'
+actionProductWithoutDescriptionGridDataModifier:
+    name: actionProductWithoutDescriptionGridDataModifier
+    title: 'Modify product without description grid data'
+    description: 'This hook allows to modify product without description grid data'
+actionProductWithoutDescriptionGridDefinitionModifier:
+    name: actionProductWithoutDescriptionGridDefinitionModifier
+    title: 'Modify product without description grid definition'
+    description: 'This hook allows to alter product without description grid columns, actions and filters'
+actionProductWithoutDescriptionGridFilterFormModifier:
+    name: actionProductWithoutDescriptionGridFilterFormModifier
+    title: 'Modify product without description grid filters'
+    description: 'This hook allows to modify filters for product without description grid'
+actionProductWithoutDescriptionGridPresenterModifier:
+    name: actionProductWithoutDescriptionGridPresenterModifier
+    title: 'Modify product without description grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for product without description grid'
+actionProductWithoutDescriptionGridQueryBuilderModifier:
+    name: actionProductWithoutDescriptionGridQueryBuilderModifier
+    title: 'Modify product without description grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for product without description grid'
+actionProductWithoutImageGridDataModifier:
+    name: actionProductWithoutImageGridDataModifier
+    title: 'Modify product without image grid data'
+    description: 'This hook allows to modify product without image grid data'
+actionProductWithoutImageGridDefinitionModifier:
+    name: actionProductWithoutImageGridDefinitionModifier
+    title: 'Modify product without image grid definition'
+    description: 'This hook allows to alter product without image grid columns, actions and filters'
+actionProductWithoutImageGridFilterFormModifier:
+    name: actionProductWithoutImageGridFilterFormModifier
+    title: 'Modify product without image grid filters'
+    description: 'This hook allows to modify filters for product without image grid'
+actionProductWithoutImageGridPresenterModifier:
+    name: actionProductWithoutImageGridPresenterModifier
+    title: 'Modify product without image grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for product without image grid'
+actionProductWithoutImageGridQueryBuilderModifier:
+    name: actionProductWithoutImageGridQueryBuilderModifier
+    title: 'Modify product without image grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for product without image grid'
+actionProductWithoutPriceGridDataModifier:
+    name: actionProductWithoutPriceGridDataModifier
+    title: 'Modify product without price grid data'
+    description: 'This hook allows to modify product without price grid data'
+actionProductWithoutPriceGridDefinitionModifier:
+    name: actionProductWithoutPriceGridDefinitionModifier
+    title: 'Modify product without price grid definition'
+    description: 'This hook allows to alter product without price grid columns, actions and filters'
+actionProductWithoutPriceGridFilterFormModifier:
+    name: actionProductWithoutPriceGridFilterFormModifier
+    title: 'Modify product without price grid filters'
+    description: 'This hook allows to modify filters for product without price grid'
+actionProductWithoutPriceGridPresenterModifier:
+    name: actionProductWithoutPriceGridPresenterModifier
+    title: 'Modify product without price grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for product without price grid'
+actionProductWithoutPriceGridQueryBuilderModifier:
+    name: actionProductWithoutPriceGridQueryBuilderModifier
+    title: 'Modify product without price grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for product without price grid'
+displayAdminProductsCombinationBottom:
+    name: displayAdminProductsCombinationBottom
+    title: 'Display new elements in back office product page, Combination tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsExtra:
+    name: displayAdminProductsExtra
+    title: 'Admin Product Extra Module Tab'
+    description: 'This hook displays extra content in the Module tab on the product edit page'
+displayAdminProductsMainStepLeftColumnBottom:
+    name: displayAdminProductsMainStepLeftColumnBottom
+    title: 'Display new elements in back office product page, left column of the Basic settings tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsMainStepLeftColumnMiddle:
+    name: displayAdminProductsMainStepLeftColumnMiddle
+    title: 'Display new elements in back office product page, left column of the Basic settings tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsMainStepRightColumnBottom:
+    name: displayAdminProductsMainStepRightColumnBottom
+    title: 'Display new elements in back office product page, right column of the Basic settings tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsOptionsStepBottom:
+    name: displayAdminProductsOptionsStepBottom
+    title: 'Display new elements in back office product page, Options tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsOptionsStepTop:
+    name: displayAdminProductsOptionsStepTop
+    title: 'Display new elements in back office product page, Options tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsPriceStepBottom:
+    name: displayAdminProductsPriceStepBottom
+    title: 'Display new elements in back office product page, Price tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsQuantitiesStepBottom:
+    name: displayAdminProductsQuantitiesStepBottom
+    title: 'Display new elements in back office product page, Quantities/Combinations tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsSeoStepBottom:
+    name: displayAdminProductsSeoStepBottom
+    title: 'Display new elements in back office product page, SEO tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAdminProductsShippingStepBottom:
+    name: displayAdminProductsShippingStepBottom
+    title: 'Display new elements in back office product page, Shipping tab'
+    description: 'This hook launches modules when the back office product page is displayed'
+displayAfterProductThumbs:
+    name: displayAfterProductThumbs
+    title: 'Display extra content below product thumbs'
+    description: 'This hook displays new elements below product images ex. additional media'
+displayCartExtraProductActions:
+    name: displayCartExtraProductActions
+    title: 'Extra buttons in shopping cart'
+    description: 'This hook adds extra buttons to the product lines, in the shopping cart'
+displayFooterProduct:
+    name: displayFooterProduct
+    title: 'Product footer'
+    description: 'This hook adds new blocks under the product''s description'
+displayLeftColumnProduct:
+    name: displayLeftColumnProduct
+    title: 'New elements on the product page (left column)'
+    description: 'This hook displays new elements in the left-hand column of the product page'
+displayProductActions:
+    name: displayProductActions
+    title: 'Display additional action button on the product page'
+    description: 'This hook allow additional actions to be triggered, near the add to cart button.'
+displayProductAdditionalInfo:
+    name: displayProductAdditionalInfo
+    title: 'Product page additional info'
+    description: 'This hook adds additional information on the product page'
+displayProductExtraContent:
+    name: displayProductExtraContent
+    title: 'Display extra content on the product page'
+    description: 'This hook expects ProductExtraContent instances, which will be properly displayed by the template on the product page'
+displayProductListFunctionalButtons:
+    name: displayProductListFunctionalButtons
+    title: 'Display new elements in the Front Office, products list'
+    description: 'This hook launches modules when the products list is displayed in the Front Office'
+displayProductPageDrawer:
+    name: displayProductPageDrawer
+    title: 'Product Page Drawer'
+    description: 'This hook displays content in the right sidebar of the product page'
+displayRightColumnProduct:
+    name: displayRightColumnProduct
+    title: 'New elements on the product page (right column)'
+    description: 'This hook displays new elements in the right-hand column of the product page'
+filterProductContent:
+    name: filterProductContent
+    title: 'Filter the content page product'
+    description: 'This hook is called just before fetching content page product'
+filterProductSearch:
+    name: filterProductSearch
+    title: 'Filter search products result'
+    description: 'This hook is called in order to allow to modify search product result'

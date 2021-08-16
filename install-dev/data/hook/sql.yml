@@ -1,0 +1,48 @@
+actionAfterCreateSqlRequestFormHandler:
+    name: actionAfterCreateSqlRequestFormHandler
+    title: 'Modify sql request identifiable object data after creating it'
+    description: 'This hook allows to modify sql request identifiable object forms data after it was created'
+actionAfterUpdateSqlRequestFormHandler:
+    name: actionAfterUpdateSqlRequestFormHandler
+    title: 'Modify sql request identifiable object data after updating it'
+    description: 'This hook allows to modify sql request identifiable object forms data after it was updated'
+actionBeforeCreateSqlRequestFormHandler:
+    name: actionBeforeCreateSqlRequestFormHandler
+    title: 'Modify sql request identifiable object data before creating it'
+    description: 'This hook allows to modify sql request identifiable object forms data before it was created'
+actionBeforeUpdateSqlRequestFormHandler:
+    name: actionBeforeUpdateSqlRequestFormHandler
+    title: 'Modify sql request identifiable object data before updating it'
+    description: 'This hook allows to modify sql request identifiable object forms data before it was updated'
+actionRequestSqlForm:
+    name: actionRequestSqlForm
+    title: 'Modify request sql options form content'
+    description: 'This hook allows to modify request sql options form FormBuilder'
+actionRequestSqlSave:
+    name: actionRequestSqlSave
+    title: 'Modify request sql options form saved data'
+    description: 'This hook allows to modify data of request sql options form after it was saved'
+actionSqlRequestFormBuilderModifier:
+    name: actionSqlRequestFormBuilderModifier
+    title: 'Modify sql request identifiable object form'
+    description: 'This hook allows to modify sql request identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionSqlRequestGridDataModifier:
+    name: actionSqlRequestGridDataModifier
+    title: 'Modify sql request grid data'
+    description: 'This hook allows to modify sql request grid data'
+actionSqlRequestGridDefinitionModifier:
+    name: actionSqlRequestGridDefinitionModifier
+    title: 'Modifying SQL Manager grid definition'
+    description: 'This hook allows to alter SQL Manager grid columns, actions and filters'
+actionSqlRequestGridFilterFormModifier:
+    name: actionSqlRequestGridFilterFormModifier
+    title: 'Modify filters form for SQL Manager grid'
+    description: 'This hook allows to alter filters form used in SQL Manager'
+actionSqlRequestGridPresenterModifier:
+    name: actionSqlRequestGridPresenterModifier
+    title: 'Modify SQL Manager grid view data'
+    description: 'This hook allows to alter presented SQL Manager grid data'
+actionSqlRequestGridQueryBuilderModifier:
+    name: actionSqlRequestGridQueryBuilderModifier
+    title: 'Modify SQL Manager grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for SQL Manager grid'

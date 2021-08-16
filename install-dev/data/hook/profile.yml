@@ -1,0 +1,40 @@
+actionAfterCreateProfileFormHandler:
+    name: actionAfterCreateProfileFormHandler
+    title: 'Modify profile identifiable object data after creating it'
+    description: 'This hook allows to modify profile identifiable object forms data after it was created'
+actionAfterUpdateProfileFormHandler:
+    name: actionAfterUpdateProfileFormHandler
+    title: 'Modify profile identifiable object data after updating it'
+    description: 'This hook allows to modify profile identifiable object forms data after it was updated'
+actionBeforeCreateProfileFormHandler:
+    name: actionBeforeCreateProfileFormHandler
+    title: 'Modify profile identifiable object data before creating it'
+    description: 'This hook allows to modify profile identifiable object forms data before it was created'
+actionBeforeUpdateProfileFormHandler:
+    name: actionBeforeUpdateProfileFormHandler
+    title: 'Modify profile identifiable object data before updating it'
+    description: 'This hook allows to modify profile identifiable object forms data before it was updated'
+actionProfileFormBuilderModifier:
+    name: actionProfileFormBuilderModifier
+    title: 'Modify profile identifiable object form'
+    description: 'This hook allows to modify profile identifiable object forms content by modifying form builder data or FormBuilder itself'
+actionProfileGridDataModifier:
+    name: actionProfileGridDataModifier
+    title: 'Modify profile grid data'
+    description: 'This hook allows to modify profile grid data'
+actionProfileGridDefinitionModifier:
+    name: actionProfileGridDefinitionModifier
+    title: 'Modify profile grid definition'
+    description: 'This hook allows to alter profile grid columns, actions and filters'
+actionProfileGridFilterFormModifier:
+    name: actionProfileGridFilterFormModifier
+    title: 'Modify profile grid filters'
+    description: 'This hook allows to modify filters for profile grid'
+actionProfileGridPresenterModifier:
+    name: actionProfileGridPresenterModifier
+    title: 'Modify profile grid template data'
+    description: 'This hook allows to modify data which is about to be used in template for profile grid'
+actionProfileGridQueryBuilderModifier:
+    name: actionProfileGridQueryBuilderModifier
+    title: 'Modify profile grid query builder'
+    description: 'This hook allows to alter Doctrine query builder for profile grid'
