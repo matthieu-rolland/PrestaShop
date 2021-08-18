@@ -56,6 +56,7 @@ use PrestaShop\PrestaShop\Adapter\Entity\Validate;
 use PrestaShop\PrestaShop\Core\Addon\Module\ModuleManagerBuilder;
 use PrestaShop\PrestaShop\Core\Addon\Theme\ThemeManagerBuilder;
 use PrestaShopBundle\Cache\LocalizationWarmer;
+use PrestaShopBundle\Install\HookLoader;
 use PrestaShopBundle\Service\Database\Upgrade as UpgradeDatabase;
 use PrestaShopException;
 use PrestashopInstallerException;
@@ -487,6 +488,8 @@ class Install extends AbstractInstall
                     $xml_loader->populateEntity($entity);
                 });
             } else {
+                $hookLoader = new HookLoader();
+                $hookLoader->installHooks();
                 $this->callWithUnityAutoincrement(function () use ($xml_loader) {
                     $xml_loader->populateFromXmlFiles();
                 });
