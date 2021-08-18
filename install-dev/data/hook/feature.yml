@@ -1,7 +1,3 @@
-actionAdminAdvancedParametersPerformanceControllerPostProcessOptionalFeaturesBefore:
-    name: actionAdminAdvancedParametersPerformanceControllerPostProcessOptionalFeaturesBefore
-    title: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
-    description: 'This hook is called on Admin Configure Advanced Parameters Performance post-process before processing the Optional Features form'
 actionAfterCreateFeatureFormHandler:
     name: actionAfterCreateFeatureFormHandler
     title: 'Modify feature identifiable object data after creating it'

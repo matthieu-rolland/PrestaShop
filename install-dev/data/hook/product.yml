@@ -82,14 +82,6 @@ actionProductAdd:
     name: actionProductAdd
     title: 'Product creation'
     description: 'This hook is displayed after a product is created'
-actionProductAttributeDelete:
-    name: actionProductAttributeDelete
-    title: 'Product attribute deletion'
-    description: 'This hook is displayed when a product''s attribute is deleted'
-actionProductAttributeUpdate:
-    name: actionProductAttributeUpdate
-    title: 'Product attribute update'
-    description: 'This hook is displayed when a product''s attribute is updated'
 actionProductCancel:
     name: actionProductCancel
     title: 'Product cancelled'

@@ -1,27 +1,3 @@
-actionAdminAdminShopParametersMetaControllerPostProcessBefore:
-    name: actionAdminAdminShopParametersMetaControllerPostProcessBefore
-    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
-    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing any form'
-actionAdminMetaSave:
-    name: actionAdminMetaSave
-    title: 'After saving the configuration in AdminMeta'
-    description: 'This hook is displayed after saving the configuration in AdminMeta'
-actionAdminShopParametersMetaControllerPostProcessSeoOptionsBefore:
-    name: actionAdminShopParametersMetaControllerPostProcessSeoOptionsBefore
-    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
-    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Seo Options form'
-actionAdminShopParametersMetaControllerPostProcessSetUpUrlsBefore:
-    name: actionAdminShopParametersMetaControllerPostProcessSetUpUrlsBefore
-    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
-    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the SetUp Urls form'
-actionAdminShopParametersMetaControllerPostProcessShopUrlsBefore:
-    name: actionAdminShopParametersMetaControllerPostProcessShopUrlsBefore
-    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
-    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Shop Urls form'
-actionAdminShopParametersMetaControllerPostProcessUrlSchemaBefore:
-    name: actionAdminShopParametersMetaControllerPostProcessUrlSchemaBefore
-    title: 'On post-process in Admin Configure Shop Parameters Meta Controller'
-    description: 'This hook is called on Admin Configure Shop Parameters Meta post-process before processing the Url Schema form'
 actionAfterCreateMetaFormHandler:
     name: actionAfterCreateMetaFormHandler
     title: 'Modify meta identifiable object data after creating it'

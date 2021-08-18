@@ -2,10 +2,6 @@ actionAfterCreateCategoryFormHandler:
     name: actionAfterCreateCategoryFormHandler
     title: 'Modify category identifiable object data after creating it'
     description: 'This hook allows to modify category identifiable object forms data after it was created'
-actionAfterCreateCmsPageCategoryFormHandler:
-    name: actionAfterCreateCmsPageCategoryFormHandler
-    title: 'Modify cms page category identifiable object data after creating it'
-    description: 'This hook allows to modify cms page category identifiable object forms data after it was created'
 actionAfterCreateRootCategoryFormHandler:
     name: actionAfterCreateRootCategoryFormHandler
     title: 'Modify root category identifiable object data after creating it'
@@ -14,10 +10,6 @@ actionAfterUpdateCategoryFormHandler:
     name: actionAfterUpdateCategoryFormHandler
     title: 'Modify category identifiable object data after updating it'
     description: 'This hook allows to modify category identifiable object forms data after it was updated'
-actionAfterUpdateCmsPageCategoryFormHandler:
-    name: actionAfterUpdateCmsPageCategoryFormHandler
-    title: 'Modify cms page category identifiable object data after updating it'
-    description: 'This hook allows to modify cms page category identifiable object forms data after it was updated'
 actionAfterUpdateRootCategoryFormHandler:
     name: actionAfterUpdateRootCategoryFormHandler
     title: 'Modify root category identifiable object data after updating it'
@@ -26,10 +18,6 @@ actionBeforeCreateCategoryFormHandler:
     name: actionBeforeCreateCategoryFormHandler
     title: 'Modify category identifiable object data before creating it'
     description: 'This hook allows to modify category identifiable object forms data before it was created'
-actionBeforeCreateCmsPageCategoryFormHandler:
-    name: actionBeforeCreateCmsPageCategoryFormHandler
-    title: 'Modify cms page category identifiable object data before creating it'
-    description: 'This hook allows to modify cms page category identifiable object forms data before it was created'
 actionBeforeCreateRootCategoryFormHandler:
     name: actionBeforeCreateRootCategoryFormHandler
     title: 'Modify root category identifiable object data before creating it'
@@ -38,10 +26,6 @@ actionBeforeUpdateCategoryFormHandler:
     name: actionBeforeUpdateCategoryFormHandler
     title: 'Modify category identifiable object data before updating it'
     description: 'This hook allows to modify category identifiable object forms data before it was updated'
-actionBeforeUpdateCmsPageCategoryFormHandler:
-    name: actionBeforeUpdateCmsPageCategoryFormHandler
-    title: 'Modify cms page category identifiable object data before updating it'
-    description: 'This hook allows to modify cms page category identifiable object forms data before it was updated'
 actionBeforeUpdateRootCategoryFormHandler:
     name: actionBeforeUpdateRootCategoryFormHandler
     title: 'Modify root category identifiable object data before updating it'
@@ -82,30 +66,6 @@ actionCategoryUpdate:
     name: actionCategoryUpdate
     title: 'Category modification'
     description: 'This hook is displayed when a category is modified'
-actionCmsPageCategoryFormBuilderModifier:
-    name: actionCmsPageCategoryFormBuilderModifier
-    title: 'Modify cms page category identifiable object form'
-    description: 'This hook allows to modify cms page category identifiable object forms content by modifying form builder data or FormBuilder itself'
-actionCmsPageCategoryGridDataModifier:
-    name: actionCmsPageCategoryGridDataModifier
-    title: 'Modify cms page category grid data'
-    description: 'This hook allows to modify cms page category grid data'
-actionCmsPageCategoryGridDefinitionModifier:
-    name: actionCmsPageCategoryGridDefinitionModifier
-    title: 'Modify cms page category grid definition'
-    description: 'This hook allows to alter cms page category grid columns, actions and filters'
-actionCmsPageCategoryGridFilterFormModifier:
-    name: actionCmsPageCategoryGridFilterFormModifier
-    title: 'Modify cms page category grid filters'
-    description: 'This hook allows to modify filters for cms page category grid'
-actionCmsPageCategoryGridPresenterModifier:
-    name: actionCmsPageCategoryGridPresenterModifier
-    title: 'Modify cms page category grid template data'
-    description: 'This hook allows to modify data which is about to be used in template for cms page category grid'
-actionCmsPageCategoryGridQueryBuilderModifier:
-    name: actionCmsPageCategoryGridQueryBuilderModifier
-    title: 'Modify cms page category grid query builder'
-    description: 'This hook allows to alter Doctrine query builder for cms page category grid'
 actionEmptyCategoryGridDataModifier:
     name: actionEmptyCategoryGridDataModifier
     title: 'Modify empty category grid data'
@@ -144,9 +104,5 @@ displayHeaderCategory:
     description: 'This hook adds new blocks above the products listing in a category/search'
 filterCategoryContent:
     name: filterCategoryContent
-    title: 'Filter the content page category'
-    description: 'This hook is called just before fetching content page category'
-filterCmsCategoryContent:
-    name: filterCmsCategoryContent
     title: 'Filter the content page category'
     description: 'This hook is called just before fetching content page category'
