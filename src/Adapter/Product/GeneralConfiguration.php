@@ -33,6 +33,7 @@ use PrestaShop\PrestaShop\Core\Configuration\AbstractMultistoreConfiguration;
 use PrestaShop\PrestaShop\Core\Domain\Product\SpecificPrice\Exception\SpecificPriceConstraintException;
 use PrestaShop\PrestaShop\Core\Domain\Product\SpecificPrice\ValueObject\PriorityList;
 use PrestaShop\PrestaShop\Core\Feature\FeatureInterface;
+use PrestaShopBundle\Service\Form\MultistoreCheckboxEnabler;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -116,7 +117,11 @@ class GeneralConfiguration extends AbstractMultistoreConfiguration
             $this->updateConfigurationValue('PS_PRODUCT_ACTIVATION_DEFAULT', 'default_status', $config, $shopConstraint);
 
             try {
-                $this->specificPricePriorityUpdater->updateDefaultPriorities(new PriorityList($config['specific_price_priorities']));
+                $this->specificPricePriorityUpdater->updateDefaultPriorities(
+                    new PriorityList($config['specific_price_priorities']),
+                    $shopConstraint,
+                    isset($config[MultistoreCheckboxEnabler::MULTISTORE_FIELD_PREFIX . 'specific_price_priorities'])
+                );
             } catch (SpecificPriceConstraintException $e) {
                 if ($e->getCode() !== SpecificPriceConstraintException::DUPLICATE_PRIORITY) {
                     throw $e;
