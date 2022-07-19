@@ -30,8 +30,8 @@ namespace PrestaShop\PrestaShop\Adapter\Product\SpecificPrice\Update;
 
 use Doctrine\DBAL\Connection;
 use Exception;
+use PrestaShop\PrestaShop\Adapter\Configuration;
 use PrestaShop\PrestaShop\Adapter\Shop\Context;
-use PrestaShop\PrestaShop\Core\ConfigurationInterface;
 use PrestaShop\PrestaShop\Core\Domain\Product\SpecificPrice\Exception\CannotSetSpecificPricePrioritiesException;
 use PrestaShop\PrestaShop\Core\Domain\Product\SpecificPrice\ValueObject\PriorityList;
 use PrestaShop\PrestaShop\Core\Domain\Product\ValueObject\ProductId;
@@ -56,7 +56,7 @@ class SpecificPricePriorityUpdater
     private $dbPrefix;
 
     /**
-     * @var ConfigurationInterface
+     * @var Configuration
      */
     private $configuration;
 
@@ -75,14 +75,14 @@ class SpecificPricePriorityUpdater
      *
      * @param Connection $connection
      * @param string $dbPrefix
-     * @param ConfigurationInterface $configuration
+     * @param Configuration $configuration
      * @param Context $shopContext
      * @param FeatureInterface $multistoreFeature
      */
     public function __construct(
         Connection $connection,
         string $dbPrefix,
-        ConfigurationInterface $configuration,
+        Configuration $configuration,
         Context $shopContext,
         FeatureInterface $multistoreFeature
     ) {
