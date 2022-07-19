@@ -92,7 +92,7 @@ class GeneralConfiguration extends AbstractMultistoreConfiguration
             'quantity_discount' => (int) $this->configuration->get('PS_QTY_DISCOUNT_ON_COMBINATION', 0, $shopConstraint),
             'force_friendly_url' => (bool) $this->configuration->get('PS_FORCE_FRIENDLY_PRODUCT', false, $shopConstraint),
             'default_status' => (bool) $this->configuration->get('PS_PRODUCT_ACTIVATION_DEFAULT', false, $shopConstraint),
-            'specific_price_priorities' => (array) $this->getPrioritiesData(),
+            'specific_price_priorities' => $this->getPrioritiesData(),
         ];
     }
 
