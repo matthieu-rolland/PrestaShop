@@ -51,7 +51,7 @@ class GeneralConfigurationTest extends AbstractConfigurationTestCase
             $this->mockConfiguration,
             $this->mockShopConfiguration,
             $this->mockMultistoreFeature,
-            $this->createSpecificPricePriorityUpdaterMock(),
+            $this->createSpecificPricePriorityUpdaterMock()
         );
 
         $this->mockShopConfiguration
