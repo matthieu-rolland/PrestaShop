@@ -201,6 +201,8 @@ class ImageRetriever
 
             $generateAdditionalWebP = (bool) Configuration::get('PS_ADDITIONAL_IMAGE_WEBP');
 
+            $additionalSources['original'] = $this->link->getImageLink($rewriteLink, $id_image);
+
             if ($generateAdditionalWebP) {
                 $resizedImagePathWebP = implode(DIRECTORY_SEPARATOR, [
                     $imageFolderPath,
