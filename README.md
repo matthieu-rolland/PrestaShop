@@ -14,6 +14,8 @@ About PrestaShop
 
 PrestaShop is an Open Source e-commerce web application, committed to providing the best shopping cart experience for both merchants and customers. It is written in PHP, is highly customizable, supports all the major payment services, is translated in many languages and localized for many countries, has a fully responsive design (both front and back office), etc. [See all the available features][available-features].
 
+#second modification
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/92941405/138826023-3523bbbc-8d51-4997-92c7-607c237653c1.png" alt="PrestaShop 1.7 back office"/>
 </p>
@@ -21,7 +23,7 @@ PrestaShop is an Open Source e-commerce web application, committed to providing 
 This repository contains the source code of PrestaShop, which is intended for development and preview only. To download the latest stable public version of PrestaShop (currently, version 1.7), please go to [the download page][download] on the official PrestaShop site.
 
 
-About the 'develop' branch
+"ffesfsffsfAbout the 'develop' branch
 --------
 
 The 'develop' branch of this repository contains the work in progress source code for the next version of PrestaShop.
@@ -32,6 +34,8 @@ The first stable version of PrestaShop 1.7, 1.7.0.0, was released on November 7t
 
 Server configuration
 --------
+
+# toto modifications
 
 To install the latest PrestaShop 1.7, you need a web server running PHP 7.1+ and any flavor of MySQL 5.0+ (MySQL, MariaDB, Percona Server, etc.). Versions between 1.7.0 and 1.7.6 work with PHP 5.6+.
 
