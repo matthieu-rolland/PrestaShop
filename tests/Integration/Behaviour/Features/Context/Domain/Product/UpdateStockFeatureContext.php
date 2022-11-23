@@ -498,7 +498,7 @@ class UpdateStockFeatureContext extends AbstractProductFeatureContext
         return $data;
     }
 
-    private function convertOutOfStockToInt(string $outOfStock): int
+    protected function convertOutOfStockToInt(string $outOfStock): int
     {
         $intValues = [
             'default' => OutOfStockType::OUT_OF_STOCK_DEFAULT,
@@ -510,6 +510,11 @@ class UpdateStockFeatureContext extends AbstractProductFeatureContext
         return $intValues[$outOfStock];
     }
 
+    /**
+     * @param string $outOfStock
+     *
+     * @return int
+     */
     private function convertPackStockTypeToInt(string $outOfStock): int
     {
         $intValues = [
