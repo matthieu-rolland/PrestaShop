@@ -133,6 +133,18 @@ class DispatcherCore
                 'tags' => ['regexp' => '[a-zA-Z0-9-\pL]*'],
             ],
         ],
+        // /art/3-13-affiche-encadree-the-best-is-yet-to-come.html#/19-dimension-40x60cm
+        // 21-large_default/brown-bear-printed-sweater.jpg
+        'image_rule' => [
+            'controller' => 'image',
+            'rule' => 'image/{id}/{category}/{format}/{extension}',
+            'keywords' => [
+                'id' => ['regexp' => '[0-9]+', 'param' => 'id'],
+                'category' => ['regexp' => '(products|categories|stores)', 'param' => 'category'],
+                'format' => ['regexp' => '[_a-zA-Z0-9-\pL]*', 'param' => 'format'],
+                'extension' => ['regexp' => '(jpg|webp|avif|png)', 'param' => 'extension'],
+            ],
+        ],
     ];
 
     /**

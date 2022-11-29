@@ -44,6 +44,12 @@ use Store;
  */
 class ImageRetriever
 {
+    const FO_IMG_DIR = [
+        'products' => _PS_PRODUCT_IMG_DIR_,
+        'categories' => _PS_CAT_IMG_DIR_,
+        'stores' => _PS_STORE_IMG_DIR_
+    ];
+
     /**
      * @var Link
      */
@@ -133,6 +139,59 @@ class ImageRetriever
         }
 
         return (0 === count($filteredImages)) ? $images : $filteredImages;
+    }
+
+    public function generateSingleFOImage(int $imageId, string $type, string $extension, string $imageCategory)
+    {
+        if (empty(self::FO_IMG_DIR[$imageCategory])) {
+            return false;
+        }
+
+        $imageTypeList = ImageType::getImagesTypes($imageCategory, true);
+        $imageType = null;
+
+        foreach ($imageTypeList as $imageTypeUnit) {
+            if (strtolower($imageTypeUnit['name']) === $type) {
+                $imageType = $imageTypeUnit;
+                break;
+            }
+        }
+
+        if (null === $imageType) {
+            return false;
+        }
+
+        $root = self::FO_IMG_DIR[$imageCategory];
+
+        if ($imageCategory === 'products') {
+            $imageFolderPath = implode(DIRECTORY_SEPARATOR, [
+                rtrim($root, DIRECTORY_SEPARATOR),
+                rtrim(Image::getImgFolderStatic($imageId), DIRECTORY_SEPARATOR),
+            ]);
+        } else {
+            $imageFolderPath = rtrim($root, DIRECTORY_SEPARATOR);
+        }
+
+        $thumbnailPath = implode(DIRECTORY_SEPARATOR, [
+            $imageFolderPath,
+            $imageId . '-' . $imageType['name'] . '.' . $extension,
+        ]);
+
+        $originalImagePath = implode(DIRECTORY_SEPARATOR, [
+            $imageFolderPath,
+            $imageId . '.' . 'jpg',
+        ]);
+
+        $result = ImageManager::resize(
+            $originalImagePath,
+            $thumbnailPath,
+            (int) $imageType['width'],
+            (int) $imageType['height'],
+            $extension,
+            true
+        );
+
+        return $result ? $thumbnailPath : false;
     }
 
     /**
