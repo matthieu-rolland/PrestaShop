@@ -65,6 +65,12 @@ class AdminImagesControllerCore extends AdminController
                     '2' => $this->trans('WebP', [], 'Admin.Design.Feature'),
                     '3' => $this->trans('AVIF', [], 'Admin.Design.Feature'),
                 ],
+                'value_multiple' => [
+                    false,
+                    false,
+                    false,
+                    false
+                ]
             ],
             'PS_IMAGE_FORMAT_FALLBACK' => [
                 'title' => $this->trans('Fallback', [], 'Admin.Design.Feature'),
@@ -403,7 +409,7 @@ class AdminImagesControllerCore extends AdminController
         }
 
         if (!$this->errors && $value) {
-            Configuration::updateValue('PS_IMAGE_QUALITY', implode('', $value));
+            Configuration::updateValue('PS_IMAGE_QUALITY', implode(',', $value));
         }
     }
 

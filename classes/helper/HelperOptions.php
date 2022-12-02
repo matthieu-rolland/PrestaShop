@@ -102,6 +102,15 @@ class HelperOptionsCore extends Helper
 
                 $field['required'] = isset($field['required']) ? $field['required'] : $this->required;
 
+                if ($field['type'] === 'checkbox') {
+                    $multipleValues = explode(',', $field['value']);
+                    $res = [false, false, false, false];
+                    foreach($multipleValues as $currentValue) {
+                        $res[$currentValue] = true;
+                    }
+                    $field['value_multiple'] = $res;
+                }
+
                 if ($field['type'] == 'color') {
                     $has_color_field = true;
                     $this->context->controller->addJqueryPlugin('colorpicker');
@@ -306,9 +315,9 @@ class HelperOptionsCore extends Helper
     public function getOptionValue($key, $field)
     {
         $value = Tools::getValue($key, Configuration::get($key));
-        if (!Validate::isCleanHtml($value)) {
+        /*if (!Validate::isCleanHtml($value)) {
             $value = Configuration::get($key);
-        }
+        }*/
 
         if (isset($field['defaultValue']) && !$value) {
             $value = $field['defaultValue'];
