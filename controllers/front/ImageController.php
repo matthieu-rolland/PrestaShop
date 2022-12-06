@@ -24,12 +24,19 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 use PrestaShop\PrestaShop\Adapter\Image\ImageRetriever;
+use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+use PrestaShop\PrestaShop\Core\FeatureFlag\FeatureFlagSettings;
 
 class ImageControllerCore extends FrontController
 {
     public function init()
     {
         parent::init();
+
+        if (!FeatureFlag::isEnabled(FeatureFlagSettings::FEATURE_FLAG_IMAGE_GENERATION)) {
+            header($_SERVER["SERVER_PROTOCOL"]." 403 Forbidden", true, 403);
+            die();
+        }
 
         $imageRetriever = new ImageRetriever($this->context->link);
 
@@ -40,11 +47,14 @@ class ImageControllerCore extends FrontController
             Tools::getValue('category')
         );
 
+        if (empty($generatedImagePath)) {
+            header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+            die();
+        }
+
         $image = file_get_contents($generatedImagePath);
         header('content-type: image/' . Tools::getValue('extension'));
         echo $image;
-
-        exit;
-
+        die();
     }
 }
