@@ -147,6 +147,11 @@ class ImageRetriever
             return false;
         }
 
+        $supportedImageExtension = explode(',', Configuration::get('PS_IMAGE_FORMAT'));
+        if (!in_array(strtolower($extension), $supportedImageExtension)) {
+            return false;
+        }
+
         $imageTypeList = ImageType::getImagesTypes($imageCategory, true);
         $imageType = null;
 
