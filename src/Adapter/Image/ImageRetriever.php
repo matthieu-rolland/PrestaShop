@@ -28,12 +28,14 @@ namespace PrestaShop\PrestaShop\Adapter\Image;
 
 use Category;
 use Configuration;
+use FeatureFlag;
 use Image;
 use ImageManager;
 use ImageType;
 use Language;
 use Link;
 use PrestaShop\PrestaShop\Core\Configuration\AvifExtensionChecker;
+use PrestaShop\PrestaShop\Core\FeatureFlag\FeatureFlagSettings;
 use PrestaShopDatabaseException;
 use PrestaShopException;
 use Product;
@@ -213,6 +215,8 @@ class ImageRetriever
             return null;
         }
 
+        $featureFlagFOGeneration = FeatureFlag::isEnabled(FeatureFlagSettings::FEATURE_FLAG_IMAGE_GENERATION);
+
         if (get_class($object) === 'Product') {
             $type = 'products';
             $getImageURL = 'getImageLink';
@@ -254,7 +258,7 @@ class ImageRetriever
             ]);
 
             // Check if the thumbnail exists, if not, create it automatically on the fly
-            if (!file_exists($thumbnailPath)) {
+            if (!file_exists($thumbnailPath) && !$featureFlagFOGeneration) {
                 ImageManager::resize(
                     $originalImagePath,
                     $thumbnailPath,
@@ -271,7 +275,7 @@ class ImageRetriever
                     $id_image . '-' . $image_type['name'] . '.webp',
                 ]);
 
-                if (!file_exists($resizedImagePathWebP)) {
+                if (!file_exists($resizedImagePathWebP) && !$featureFlagFOGeneration) {
                     ImageManager::resize(
                         $originalImagePath,
                         $thumbnailPath,
@@ -291,7 +295,7 @@ class ImageRetriever
                     $id_image . '-' . $image_type['name'] . '.avif',
                 ]);
 
-                if (!file_exists($resizedImagePathAvif)) {
+                if (!file_exists($resizedImagePathAvif) && !$featureFlagFOGeneration) {
                     ImageManager::resize(
                         $originalImagePath,
                         $thumbnailPath,
@@ -314,7 +318,7 @@ class ImageRetriever
                     $imageFolderPath,
                     $id_image . '-' . $image_type['name'] . '2x.' . $ext,
                 ]);
-                if (!file_exists($thumbnailPathHighDpi)) {
+                if (!file_exists($thumbnailPathHighDpi) && !$featureFlagFOGeneration) {
                     ImageManager::resize(
                         $originalImagePath,
                         $thumbnailPathHighDpi,
