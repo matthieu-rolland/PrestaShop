@@ -1116,7 +1116,7 @@ describe('BO - Orders - View and edit order: Check invoice', async () => {
               `${productWithEcoTax.name}, ,`
               + `€${productWithEcoTax.price.toFixed(2)},,`
               + `ecotax: €${productWithEcoTax.ecoTax.toFixed(2)},,`
-              + '1, ,'
+              + '1, , '
               + `€${productWithEcoTax.price.toFixed(2)}`,
             );
             await expect(basePriceVisible, 'Unit price (Tax excl.), Ecotax, Quantity, '
