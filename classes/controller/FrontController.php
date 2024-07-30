@@ -561,6 +561,14 @@ class FrontControllerCore extends Controller
             'debug' => _PS_MODE_DEV_,
         ];
 
+        $dateFromFO = strtotime($_COOKIE['cart_last_update'] ?? false);
+        $dateFromDB = strtotime($cart->date_upd ?? false);
+
+        if ($dateFromFO < $dateFromDB) {
+            $templateVars['cart_last_update'] = $cart->date_upd;
+            $templateVars['cart'] = $this->cart_presenter->present($cart);
+        }
+
         // An array [module_name => module_output] will be returned
         $modulesVariables = Hook::exec(
             'actionFrontControllerSetVariables',
