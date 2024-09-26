@@ -1693,6 +1693,23 @@ abstract class ModuleCore implements ModuleInterface
     }
 
     /**
+     * Return modules that are installed AND enabled
+     *
+     * @return array Modules
+     */
+    public static function getModulesInstalledAndEnabled()
+    {
+        $id_shops = Shop::getContextListShopID();
+
+        $select = 'SELECT m.`id_module`, m.`name`, m.`version`';
+        $from = ' FROM `' . _DB_PREFIX_ . 'module` m';
+        $from .= ' INNER JOIN `' . _DB_PREFIX_ . 'module_shop` ms ON ms.`id_module` = m.`id_module`';
+        $from .= ' AND ms.`id_shop` IN (' . (implode(',', array_map('intval', $id_shops))) . ')';
+
+        return Db::getInstance()->executeS($select . $from);
+    }
+
+    /**
      * Returns the list of the payment module associated to the current customer.
      *
      * @see PaymentModule::getInstalledPaymentModules() if you don't care about the context
